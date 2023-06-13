@@ -1,0 +1,585 @@
+{
+  "universities": [
+    {
+      "id": 1,
+      "year_of_establishment": 1096,
+      "name": "University of Oxford",
+      "country": "England",
+      "faculty": 250,
+      "students": 3000,
+      "courses": 15,
+      "images": [
+        "https://images.unsplash.com/photo-1583373834259-46cc92173cb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dW5pdmVyc2l0eSUyMGNhbXB1c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHVuaXZlcnNpdHklMjBjYW1wdXN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/photo-1619279302118-43033660826a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHN0dWRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+      ],
+      "flag": "https://t4.ftcdn.net/jpg/01/71/57/89/360_F_171578974_eNhE6sEpc6jsK6Py7IxhTbIZZQ7878Wb.jpg",
+      "ownership": "Government",
+      "rating": "4.2/5",
+      "place": "Oxford",
+      "category": "university",
+      "brochure":"300"
+    },
+    {
+      "id": 2,
+      "year_of_establishment": 1209,
+      "name": "University of Cambridge",
+      "country": "UK",
+      "faculty": 300,
+      "students": 3100,
+      "courses": 20,
+      "images": [
+        "https://images.unsplash.com/photo-1581362072978-14998d01fdaa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHVuaXZlcnNpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+      ],
+      "flag": "https://t4.ftcdn.net/jpg/01/71/57/89/360_F_171578974_eNhE6sEpc6jsK6Py7IxhTbIZZQ7878Wb.jpg",
+      "ownership": "Government",
+      "rating": "4.2/5",
+      "place": "Cambridge",
+      "category": "university",
+      "brochure":"500"
+    },
+    {
+      "id": 3,
+      "place": "Pasadena",
+      "year_of_establishment": 1209,
+      "name": "California university of Technology",
+      "country": "USA",
+      "faculty": 500,
+      "students": 2700,
+      "courses": 22,
+      "images": [
+        "https://images.unsplash.com/20/cambridge.JPG?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/photo-1564981797816-1043664bf78d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHVuaXZlcnNpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png",
+      "ownership": "Government",
+      "rating": "4.2/5",
+      "category": "university",
+      "brochure":"400"
+    },
+    {
+      "id": 4,
+      "year_of_establishment": "2004",
+      "name": "Sandeep University",
+      "country": "India",
+      "faculty": "500",
+      "students": "6000",
+      "courses": "32",
+      "images": [
+        "https://images.unsplash.com/photo-1569447891824-7a1758aa73a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHVuaXZlcnNpdHklMjBjYW1wdXN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eSUyMGNhbXB1c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHMlMjB0YWxraW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
+      ],
+      "flag": "https://t4.ftcdn.net/jpg/00/62/19/83/360_F_62198354_ZMVmTGPrX6RFb9DfEN67As9zhVvlUOpt.jpg",
+      "ownership": "private",
+      "rating": "4/5",
+      "place": "Nashik",
+      "category": "university",
+      "brochure": "460"
+    },
+    {
+      "id": 5,
+      "year_of_establishment": "1600",
+      "name": "Pune University",
+      "country": "India",
+      "faculty": "1500",
+      "students": "25000",
+      "courses": "55",
+      "images": [
+        "https://images.unsplash.com/photo-1577195943805-d9a2f1c404bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cHVuZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1569878766010-17bff0a1987d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGxpYnJhcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1542868796-20f2ddc9d41f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fHN0dWRlbnRzJTIwdGFsa2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+      ],
+      "flag": "https://t4.ftcdn.net/jpg/00/62/19/83/360_F_62198354_ZMVmTGPrX6RFb9DfEN67As9zhVvlUOpt.jpg",
+      "ownership": "Government",
+      "rating": "4.8/5",
+      "place": "Pune",
+      "category": "university",
+      "brochure": "3500"
+    },
+    {
+      "id": 6,
+      "year_of_establishment": "2004",
+      "name": "Sapkal Knowledge Hub",
+      "country": "India",
+      "faculty": "450",
+      "students": "3200",
+      "courses": "32",
+      "images": [
+        "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29sbGVnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1561089489-f13d5e730d72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fHN0dWRlbnRzJTIwdGFsa2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60","https://plus.unsplash.com/premium_photo-1661634136642-7a4d16900f84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzl8fHN0dWRlbnRzJTIwdGFsa2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+      ],
+      "flag": "https://t4.ftcdn.net/jpg/00/62/19/83/360_F_62198354_ZMVmTGPrX6RFb9DfEN67As9zhVvlUOpt.jpg",
+      "ownership": "private",
+      "rating": "4/5",
+      "place": "Nashik",
+      "category": "university",
+      "brochure": "460"
+    },
+    {
+      "id": 7,
+      "year_of_establishment": "1897",
+      "name": "Kyoto University",
+      "country": "Japan",
+      "faculty": "150",
+      "students": "22000",
+      "courses": "35",
+      "images": ["https://images.unsplash.com/photo-1622604647545-0cada2f34470?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80","https://images.unsplash.com/photo-1531496730074-83b638c0a7ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"],
+      "flag": "https://www.shutterstock.com/image-illustration/waving-world-flags-silk-satin-260nw-1655518777.jpg",
+      "ownership": "Government",
+      "rating": "4.7/5",
+      "place": "Tokyo",
+      "category": "university",
+      "brochure": "880"
+    },
+    {
+      "id": 8,
+      "year_of_establishment": "1931",
+      "name": "Osaka University",
+      "country": "Japan",
+      "faculty": "250",
+      "students": "22000",
+      "courses": "22",
+      "images": ["https://images.unsplash.com/photo-1666243035395-9b7853cecc05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNhbXB1cyUyMHVuaXZlcnNpdGFyaW98ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1552900651-b2a53060a085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80","https://images.unsplash.com/photo-1651322408059-c898b35b9a14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhbXB1cyUyMHVuaXZlcnNpdGFyaW98ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"],
+      "flag": "https://www.shutterstock.com/image-illustration/waving-world-flags-silk-satin-260nw-1655518777.jpg",
+      "ownership": "Government",
+      "rating": "4.7/5",
+      "place": "Tokyo",
+      "category": "university",
+      "brochure": "440"
+    },
+    {
+      "id": 9,
+      "year_of_establishment": "1882",
+      "name": "Waseda University",
+      "country": "Japan",
+      "faculty": "554",
+      "students": "14000",
+      "courses": "25",
+      "images": ["https://images.unsplash.com/photo-1532457239977-d10462f33c4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80","https://images.unsplash.com/photo-1552900651-b2a53060a085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80","https://images.unsplash.com/photo-1651322408059-c898b35b9a14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhbXB1cyUyMHVuaXZlcnNpdGFyaW98ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"],
+      "flag": "https://www.shutterstock.com/image-illustration/waving-world-flags-silk-satin-260nw-1655518777.jpg",
+      "ownership": "Government",
+      "rating": "4.7/5",
+      "place": "Shinjuku",
+      "category": "university",
+      "brochure": "350"
+    },
+    {
+      "id": 10,
+      "year_of_establishment": "1890",
+      "name": "BHS Higher Education Society",
+      "country": "India",
+      "faculty": "150",
+      "students": "2200",
+      "courses": "11",
+      "images": [
+        "https://images.unsplash.com/photo-1610962381137-50ef93055125?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80","https://images.unsplash.com/photo-1463592177119-bab2a00f3ccb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80","https://images.unsplash.com/photo-1616402455550-9b3856740f21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80"
+      ],
+      "flag": "https://t4.ftcdn.net/jpg/00/62/19/83/360_F_62198354_ZMVmTGPrX6RFb9DfEN67As9zhVvlUOpt.jpg",
+      "ownership": "private",
+      "rating": "4/5",
+      "place": "Bangalore",
+      "category": "school",
+      "brochure": "220"
+    },
+    {
+      "id": 11,
+      "year_of_establishment": 2001,
+      "name": "Northwest school",
+      "country": "Canada",
+      "faculty": 150,
+      "students": 8000,
+      "courses": 120,
+      "images": [
+        "https://tse1.mm.bing.net/th?id=OIP.yWVNDb4HjU3U4rGmDo5KzgHaFB&pid=Api&P=0"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg",
+      "ownership": "private",
+      "rating": 4.3,
+      "place": "Vancouver",
+      "category": "school",
+      "brochure": 110
+    },
+    {
+      "id": 12,
+      "year_of_establishment": 2008,
+      "name": "Evergreen University",
+      "country": "United States",
+      "faculty": 200,
+      "students": 10000,
+      "courses": 150,
+      "images": [
+        "https://tse2.mm.bing.net/th?id=OIP.YNGQRvdKs87efe8W0mOMuAHaEK&pid=Api&P=0"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+      "ownership": "private",
+      "rating": 4.4,
+      "place": "Seattle",
+      "category": "university",
+      "brochure": 160
+    },
+    {
+      "id": 13,
+      "year_of_establishment": 1960,
+      "name": "Green Valley school",
+      "country": "United States",
+      "faculty": 250,
+      "students": 12000,
+      "courses": 180,
+      "images": [
+        "https://tse3.mm.bing.net/th?id=OIP.vr6SdhWnvhjCruZ40dDeUgHaFD&pid=Api&P=0"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+      "ownership": "private",
+      "rating": 4.2,
+      "place": "San Francisco",
+      "category": "school",
+      "brochure": 130
+    },
+    {
+      "id": 14,
+      "year_of_establishment": 1978,
+      "name": "Global school",
+      "country": "India",
+      "faculty": 300,
+      "students": 20000,
+      "courses": 250,
+      "images": [
+                  "https://tse3.mm.bing.net/th?id=OIP.YSMhkGqxLNTMuv3hK8MITQHaFj&pid=Api&P=0"
+          ],
+          "flag": "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
+                "ownership": "private",
+                "rating": 4.5,
+                "place": "Agra",
+                "category": "school",
+                "brochure": 130
+              },
+    {
+      "id": 15,
+      "year_of_establishment": 2000,
+      "name": "Tech university",
+      "country": "Canada",
+      "faculty": 180,
+      "students": 12000,
+      "courses": 100,
+      "images": [
+        "https://tse3.mm.bing.net/th?id=OIP.OgEFEb0xtXVFbaeufFtm4AHaEo&pid=Api&P=0"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg",
+      "ownership": "private",
+      "rating": 4.3,
+      "place": "Toronto",
+      "category": "university",
+      "brochure": 100
+    },
+    {
+      "id": 16,
+      "year_of_establishment": 1967,
+      "name": "National school India",
+      "country": "India",
+      "faculty": 350,
+      "students": 25000,
+      "courses": 200,
+      "images": [
+        "https://tse1.mm.bing.net/th?id=OIP.l1cybI49AiMI9Yz3D4-R_QHaD4&pid=Api&P=0"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
+      "ownership": "Government",
+      "rating": 4.1,
+      "place": "Mumbai",
+      "category": "school",
+      "brochure": 120
+    },
+    {
+      "id": 17,
+      "year_of_establishment": 1990,
+      "name": "International School",
+      "country": "Singapore",
+      "faculty": 200,
+      "students": 15000,
+      "courses": 150,
+      "images": [
+        "https://tse3.mm.bing.net/th?id=OIP.0vu2OdR7A4_IN6wriUwwEgHaEK&pid=Api&P=0"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Singapore.svg",
+      "ownership": "private",
+      "rating": 4.5,
+      "place": "Singapore",
+      "category": "School",
+      "brochure": 150
+    },
+    {
+      "id": 18,
+      "year_of_establishment": 2000,
+      "name": "Central University",
+      "country": "India",
+      "faculty": 300,
+      "students": 20000,
+      "courses": 250,
+      "images": [
+        "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "https://images.unsplash.com/photo-1618355776464-8666794d2520?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fHN0dWRlbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+      ],
+      "flag": "https://t4.ftcdn.net/jpg/00/62/19/83/360_F_62198354_ZMVmTGPrX6RFb9DfEN67As9zhVvlUOpt.jpg",
+      "ownership": "Government",
+      "rating": 4.2,
+      "place": "Hyderabad",
+      "category": "university",
+      "brochure": 100
+    },
+    {
+      "id": 19,
+      "year_of_establishment": 1985,
+      "name": "International school",
+      "country": "Australia",
+      "faculty": 150,
+      "students": 8000,
+      "courses": 120,
+      "images": [
+        "https://tse4.mm.bing.net/th?id=OIP.vczvVmGUnMK6yu1RSvbWFgHaE7&pid=Api&P=0"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Flag_of_Australia.svg/800px-Flag_of_Australia.svg.png",
+      "ownership": "private",
+      "rating": 4.6,
+      "place": "Sydney",
+      "category": "school",
+      "brochure": 80
+    },
+    {
+      "id": 20,
+      "year_of_establishment": 1990,
+      "name": "National Law University",
+      "country": "India",
+      "faculty": 100,
+      "students": 5000,
+      "courses": 50,
+      "images": [
+        "https://tse2.mm.bing.net/th?id=OIP._-TEznaZbL9O2I6A2GYLGQHaEK&pid=Api&P=0"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_India.svg",
+      "ownership": "Government",
+      "rating": 4.4,
+      "place": "Bangalore",
+      "category": "university",
+      "brochure": 50
+    },
+    {
+      "id": 21,
+      "year_of_establishment": 1998,
+      "name": "Global University",
+      "country": "India",
+      "faculty": 250,
+      "students": 15000,
+      "courses": 200,
+      "images": [
+      ],
+      "flag": "https://t4.ftcdn.net/jpg/00/62/19/83/360_F_62198354_ZMVmTGPrX6RFb9DfEN67As9zhVvlUOpt.jpg",
+      "ownership": "private",
+      "rating": 4.5,
+      "place": "New York",
+      "category": "university",
+      "brochure": 150
+    },
+    {
+      "id": 22,
+      "year_of_establishment": 1956,
+      "name": "State school",
+      "country": "USA",
+      "faculty": 300,
+      "students": 20000,
+      "courses": 150,
+      "images": [
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png",
+      "ownership": "Government",
+      "rating": 4.5,
+      "place": "California",
+      "category": "school",
+      "brochure": 120
+    },
+    {
+      "id": 23,
+      "year_of_establishment": 1972,
+      "name": "National University",
+      "country": "India",
+      "faculty": 400,
+      "students": 30000,
+      "courses": 300,
+      "images": [
+        "https://tse3.mm.bing.net/th?id=OIP.m_ncGuXHF9HfzdjWHtAYYQHaEo&pid=Api&P=0"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
+      "ownership": "Government",
+      "rating": 4.2,
+      "place": "New Delhi",
+      "category": "university",
+      "brochure": 180
+    },
+    {
+      "id": 24,
+      "year_of_establishment": 2005,
+      "name": "Global Business School",
+      "country": "UK",
+      "faculty": 150,
+      "students": 8000,
+      "courses": 100,
+      "images": [
+        "https://tse4.mm.bing.net/th?id=OIP.KOPSkLiaJAu1gPWv-Q6HEAHaE8&pid=Api&P=0"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
+      "ownership": "Government",
+      "rating": 4.2,
+      "place": "Banglore",
+      "category": "university",
+      "brochure": 150
+    },
+    {
+"id": 25,
+"year_of_establishment": 1965,
+"name": "European Business School",
+"country": "Japan",
+"faculty": 150,
+"students": 10000,
+"courses": 100,
+"images": [
+"https://tse1.mm.bing.net/th?id=OIP.LQnsgZ2CmsRhvazz4wE-twHaDH&pid=Api&P=0"
+],
+"flag": "https://www.shutterstock.com/image-illustration/waving-world-flags-silk-satin-260nw-1655518777.jpg",
+"ownership": "private",
+"rating": 4.7,
+"place": "Berlin",
+"category": "Business School",
+"brochure": 200
+},
+{
+"id": 26,
+"year_of_establishment": 1980,
+"name": "Tokyo University",
+"country": "Japan",
+"faculty": 400,
+"students": 25000,
+"courses": 250,
+"images": [
+"https://i.pinimg.com/originals/c9/d2/84/c9d284e5c2bdcdaa793dc118fcb4f92e.jpg"
+],
+"flag": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg",
+"ownership": "Government",
+"rating": "4.5/5",
+"place": "Tokyo",
+"category": "university",
+"brochure": 180
+},
+{
+"id": 27,
+"year_of_establishment": 1995,
+"name": "National University of England",
+"country": "England",
+"faculty": 500,
+"students": 30000,
+"courses": 300,
+"images": [
+"https://tse2.mm.bing.net/th?id=OIP.2fGiCWXxTndhhfCnXauR-AHaE8&pid=Api&P=0"
+],
+"flag": "https://t4.ftcdn.net/jpg/01/71/57/89/360_F_171578974_eNhE6sEpc6jsK6Py7IxhTbIZZQ7878Wb.jpg",
+"ownership": "Government",
+"rating": "4.6/5",
+"place": "Singapore",
+"category": "university",
+"brochure": 220
+},
+ {
+      "id": 28,
+      "year_of_establishment": 2001,
+      "name": "Central University",
+      "country": "India",
+      "faculty": 300,
+      "students": 25000,
+      "courses": 250,
+      "images": [
+        "https://tse3.mm.bing.net/th?id=OIP.WWbFHR6ddVj1m4AFZ9zN7QHaDQ&pid=Api&P=0"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
+      "ownership": "Government",
+      "rating": 4.4,
+      "place": "Mumbai",
+      "category": "university",
+      "brochure": 200
+    },
+    {
+      "id": 29,
+      "year_of_establishment": 1987,
+      "name": "State University",
+      "country": "USA",
+      "faculty": 350,
+      "students": 18000,
+      "courses": 180,
+      "images": [
+        "https://tse3.mm.bing.net/th?id=OIP.nuzbjUdUg7dPwNI98T3LQwHaEK&pid=Api&P=0"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+      "ownership": "Government",
+      "rating": 4.3,
+      "place": "Texas",
+      "category": "university",
+      "brochure": 150
+    },
+    {
+      "id": 30,
+      "year_of_establishment": 1990,
+      "name": "Private university",
+      "country": "UK",
+      "faculty": 200,
+      "students": 10000,
+      "courses": 120,
+      "images": [
+        "https://tse2.mm.bing.net/th?id=OIP.9aR7VhZeJD_4PG-sx0y4xAHaE7&pid=Api&P=0"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg",
+      "ownership": "private",
+      "rating": 4.6,
+      "place": "London",
+      "category": "university",
+      "brochure": 100
+    },
+    {
+      "id": 31,
+      "year_of_establishment": 1978,
+      "name": "State Polytechnic",
+      "country": "England",
+      "faculty": 150,
+      "students": 12000,
+      "courses": 90,
+      "images": [
+        "https://tse3.mm.bing.net/th?id=OIP.v__pW21IxvMAZxeTbO5NiAHaEb&pid=Api&P=0"
+],
+   "flag" : "https://t4.ftcdn.net/jpg/01/71/57/89/360_F_171578974_eNhE6sEpc6jsK6Py7IxhTbIZZQ7878Wb.jpg",
+"ownership": "private",
+      "rating": 4.6,
+      "place": "London",
+      "category": "university",
+      "brochure": 100
+}
+  ],
+  "programs" : [
+    {
+      "id" : 1,
+      "image" : "",
+      "programName" : "",
+      "degree" : "",
+      "university" : "",
+      "country" : "",
+      "programType" : "",
+      "duration" : "",
+      "fees" : "",
+      "startMonth" : ""
+    }
+  ],
+  "login": [
+    {
+      "id": 1,
+      "username": "ansh",
+      "email" : "anshkathpal17@gmail.com",
+      "password": "ansh"
+    }
+  ],
+  "admin": []
+}
