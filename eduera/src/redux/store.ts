@@ -1,14 +1,14 @@
 import { applyMiddleware, combineReducers, legacy_createStore } from "redux";
 import {reducer as authReducer} from "./Authentication/reducer"
 // import {reducer as programeReducer} from "./Programs/reducer"
-// import {reducer as universitiesReducer} from "./Universities/reducer"
+import {reducer as universitiesReducer} from "./University/reducer"
 import thunk from "redux-thunk";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
 const rootReducer = combineReducers({
     authReducer,
     // programeReducer,
-    // universitiesReducer,
+    universitiesReducer,
 })
 
 export const store = legacy_createStore(rootReducer, applyMiddleware(thunk));
@@ -23,4 +23,4 @@ export type RootState = ReturnType<typeof store.getState>;
 
 export const useAppDispatch: () => AppDispatch = useDispatch ;
 
-export const useAppSelector: TypedUseSelectorHook <RootState> = useSelector ;
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector ;
