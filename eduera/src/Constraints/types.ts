@@ -6,7 +6,7 @@ export interface University {
         faculty: number;
         students: number;
         courses: number;
-        images: Array<string>;
+        images: string;
         flag: string;
         ownership: string;
         rating: string;
