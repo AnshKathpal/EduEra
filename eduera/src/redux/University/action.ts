@@ -1,6 +1,6 @@
 import { University } from "../../Constraints/types";
 import { AppDispatch } from "../store";
-import { getUniversities } from "./api";
+import { getUniversities, postUniversities } from "./api";
 import * as types from "./actionTypes";
 
 export interface IUniversityRequest {
@@ -33,11 +33,25 @@ const getUniversitySuccess = (data : University[]): IGetUniversitySuccess =>{
     return {type : types.GET_UNIVERSITY_SUCCESS, payload : data}
 }
 
-export const getUniversity = () => 
+
+// const postUniversity = (university: University) =>
+//   async (dispatch: AppDispatch) => {
+//     dispatch(universityRequest());
+//     try {
+//       const response = await postUniversity(university);
+//       const data = response.data; // Modify this line based on the structure of the response
+//       dispatch(getUniversitySuccess(data));
+//     } catch (error) {
+//       dispatch(universityError());
+//     }
+// };
+
+  
+export const getUniversity = (getUniversityParam?: { params: { country: string[] } }) : any => 
     async (dispatch : AppDispatch) => {
         dispatch(universityRequest());
         try {
-            let data = await getUniversities()
+            let data = await getUniversities(getUniversityParam)
             if(data){
                 dispatch(getUniversitySuccess(data));
             }
