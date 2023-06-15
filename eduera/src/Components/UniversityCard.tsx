@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Button, ButtonGroup, HStack, Card, CardBody, CardFooter, Container, Divider, Heading, Image, Stack, Text, Flex } from '@chakra-ui/react'
-import { University } from '../Constraints/types'
+import { University } from '../Constraints/types';
+
 
 export const UniversityCard = ({id,year_of_establishment,name,country,faculty,students,courses,images,flag,ownership,rating,place,category,brochure}: University) => {
   return (
@@ -32,8 +33,8 @@ export const UniversityCard = ({id,year_of_establishment,name,country,faculty,st
       </Flex>
     </Stack>
     </Box>
-
-{/* <Card maxW='sm'>
+{/* 
+<Card maxW='sm'>
   <CardBody border="1px solid red" >
     <Box border = "1px solid red" height="40%" >
     <Image
