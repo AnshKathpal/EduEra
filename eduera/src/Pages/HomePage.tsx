@@ -1,7 +1,12 @@
 import React from 'react'
+import Navbar from '../Components/Navbar'
+import Container from "../Components/Container"
 
 export const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>
+      <Navbar/>
+      <Container/>
+      </div>
   )
 }
