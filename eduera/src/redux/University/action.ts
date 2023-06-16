@@ -3,6 +3,7 @@ import { AppDispatch } from "../store";
 import { getUniversities, postUniversities } from "./api";
 import * as types from "./actionTypes";
 
+
 export interface IUniversityRequest {
   type: typeof types.UNIVERSITY_REQUEST;
 }
@@ -15,6 +16,8 @@ export interface IGetUniversitySuccess {
   type: typeof types.GET_UNIVERSITY_SUCCESS;
   payload: University[];
 }
+
+
 
 export type AppAction =
   | IUniversityRequest
@@ -47,7 +50,7 @@ const getUniversitySuccess = (data : University[]): IGetUniversitySuccess =>{
 // };
 
   
-export const getUniversity = (getUniversityParam?: { params: { country: string[] } }) : any => 
+export const getUniversity = (getUniversityParam?: { params: { country: string[] , place : string[] } }) : any => 
     async (dispatch : AppDispatch) => {
         dispatch(universityRequest());
         try {
