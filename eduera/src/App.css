@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.education:hover{
+  background: #4787f3;
+  color:white;
+  cursor:pointer
+}
+.option:hover{
+  color: #4787f3;
+}
