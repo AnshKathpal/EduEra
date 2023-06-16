@@ -8,8 +8,7 @@ export const UniversityCard = ({id,year_of_establishment,name,country,faculty,st
 
     <>
 
-    <Box padding="10" border="1px solid red">
-
+    {/* <Box padding="10" border="1px solid green">
 <Box border="1px solid blue" height="40%" >
 <Image
       src={images}
@@ -32,11 +31,11 @@ export const UniversityCard = ({id,year_of_establishment,name,country,faculty,st
         <Box w="48%"  bgColor="rgb(244,245,247)"> <b>Courses</b> <br /> {courses} </Box>
       </Flex>
     </Stack>
-    </Box>
-{/* 
-<Card maxW='sm'>
-  <CardBody border="1px solid red" >
-    <Box border = "1px solid red" height="40%" >
+    </Box> */}
+
+
+  <div  style = {{ boxShadow : " rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" , backgroundColor : "white", height : "max-content", padding : "10px"}}  >
+    <Box     mb={5} height = "280px" >
     <Image
       src={images}
       alt={name}
@@ -45,9 +44,9 @@ export const UniversityCard = ({id,year_of_establishment,name,country,faculty,st
       height="100%"
     />
     </Box>
-    <Stack border="1px solid blue" mt='6'>
-      <Heading size='md'>{name}</Heading>
-      <Text>
+    <Stack spacing = {3}>
+      <Heading color="rgb(72,135,242)" size='md'>{name}</Heading>
+      <Text fontWeight="extrabold" >
         {place}, {country}
       </Text>
       <Flex justifyContent="space-between" >
@@ -59,9 +58,14 @@ export const UniversityCard = ({id,year_of_establishment,name,country,faculty,st
         <Box w="48%"  bgColor="rgb(244,245,247)"> <b>Courses</b> <br /> {courses} </Box>
       </Flex>
     </Stack>
-  </CardBody>
-  <Divider />
-  <CardFooter>
+<Stack mt={3} spacing={5} >
+  <Button bg={"rgb(242,104,34)"} color = "white" variant="solid" >Start Application</Button>
+  <Button color="#4887f2" border= "2px solid #4887f2"  variant="outline" >Find your Program Matches</Button>
+  </Stack>
+
+  </div>
+  {/* <Divider /> */}
+  {/* <CardFooter>
     <ButtonGroup spacing='2'>
       <Button variant='solid' colorScheme='blue'>
         Start Application
@@ -70,8 +74,7 @@ export const UniversityCard = ({id,year_of_establishment,name,country,faculty,st
         Find your Programs
       </Button>
     </ButtonGroup>
-  </CardFooter>
-</Card> */}
+  </CardFooter> */}
 
 
 

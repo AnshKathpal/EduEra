@@ -1,0 +1,19 @@
+export const PROGRAM_REQUEST = "PROGRAM_REQUEST";
+export const PROGRAM_ERROR = "PROGRAM_ERROR";
+
+// Post
+
+export const POST_PROGRAM_SUCCESS = "POST_PROGRAM_SUCCESS";
+
+// Get
+
+export const GET_PROGRAM_SUCCESS = "GET_PROGRAM_SUCCESS";
+
+// Edit
+
+export const EDIT_PROGRAM = "EDIT_PROGRAM";
+
+// DELETE
+
+export const DELETE_PROGRAM = "DELETE_PROGRAM"
+

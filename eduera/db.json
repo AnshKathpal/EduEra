@@ -29,7 +29,7 @@
       "students": 3100,
       "courses": 20,
       "images": [
-        "https://images.unsplash.com/photo-1581362072978-14998d01fdaa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHVuaXZlcnNpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/20/cambridge.JPG?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
         "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
         "https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
       ],
@@ -87,7 +87,7 @@
       "students": "25000",
       "courses": "55",
       "images": [
-        "https://images.unsplash.com/photo-1577195943805-d9a2f1c404bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cHVuZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1569878766010-17bff0a1987d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGxpYnJhcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1542868796-20f2ddc9d41f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fHN0dWRlbnRzJTIwdGFsa2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+        "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29sbGVnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1561089489-f13d5e730d72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fHN0dWRlbnRzJTIwdGFsa2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60","https://plus.unsplash.com/premium_photo-1661634136642-7a4d16900f84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzl8fHN0dWRlbnRzJTIwdGFsa2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
       ],
       "flag": "https://t4.ftcdn.net/jpg/00/62/19/83/360_F_62198354_ZMVmTGPrX6RFb9DfEN67As9zhVvlUOpt.jpg",
       "ownership": "Government",
@@ -371,8 +371,9 @@
       "students": 15000,
       "courses": 200,
       "images": [
+        "https://tse3.mm.bing.net/th?id=OIP.m_ncGuXHF9HfzdjWHtAYYQHaEo&pid=Api&P=0"
       ],
-      "flag": "https://t4.ftcdn.net/jpg/00/62/19/83/360_F_62198354_ZMVmTGPrX6RFb9DfEN67As9zhVvlUOpt.jpg",
+      "flag": "https://tse3.mm.bing.net/th?id=OIP.m_ncGuXHF9HfzdjWHtAYYQHaEo&pid=Api&P=0",
       "ownership": "private",
       "rating": 4.5,
       "place": "New York",
@@ -388,8 +389,9 @@
       "students": 20000,
       "courses": 150,
       "images": [
+        "https://tse3.mm.bing.net/th?id=OIP.m_ncGuXHF9HfzdjWHtAYYQHaEo&pid=Api&P=0"
       ],
-      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png",
+      "flag": "https://tse3.mm.bing.net/th?id=OIP.m_ncGuXHF9HfzdjWHtAYYQHaEo&pid=Api&P=0",
       "ownership": "Government",
       "rating": 4.5,
       "place": "California",
@@ -562,15 +564,51 @@
   "programs" : [
     {
       "id" : 1,
-      "image" : "",
-      "programName" : "",
-      "degree" : "",
-      "university" : "",
-      "country" : "",
-      "programType" : "",
-      "duration" : "",
-      "fees" : "",
-      "startMonth" : ""
+      "image" : "https://images.studee.com/images/university/university__academy-of-information-technology--logo.png?ixlib=js-2.3.2&auto=format&fit=crop&q=35&w=85&h=85",
+      "programName" : "2D Animation (Melbourne Campus)",
+      "degree" : "BAnim",
+      "university" : "AIT Academy of Interactive Technology",
+      "country" : "Australia",
+      "programType" : "Bachelor's",
+      "duration" : "3 years",
+      "fees" : "8,527 GBP",
+      "startMonth" : "February, May, September"
+    },
+    {
+      "id" : 2,
+      "image" : "https://images.studee.com/images/university/university__new-york-film-academy--logo.png?ixlib=js-2.3.2&auto=format&fit=crop&q=35&w=85&h=85",
+      "programName" : "3D Animation and VFX",
+      "degree" : "BFA",
+      "university" : "New York Film Academy",
+      "country" : "USA",
+      "programType" : "Bachelor's",
+      "duration" : "3 years",
+      "fees" : "21,858 GBP",
+      "startMonth" : "August, January, May"
+    },
+    {
+      "id" : 3,
+      "image" : "https://images.studee.com/images/university/university__university-of-north-carolina-wilmington--logo.svg?ixlib=js-2.3.2&auto=format&fit=crop&q=35&w=85&h=85",
+      "programName" : "Accelerated Plus (Digital)",
+      "degree" : "PGP",
+      "university" : "AIT Academy of Interactive Technology",
+      "country" : "Postgraduate pathway",
+      "programType" : "Bachelor's",
+      "duration" : "6 months",
+      "fees" : "8,527 GBP",
+      "startMonth" : "September"
+    },
+    {
+      "id" : 4,
+      "image" : "https://images.studee.com/images/university/university__southern-utah-university--logo.svg?ixlib=js-2.3.2&auto=format&fit=crop&q=35&w=85&h=85",
+      "programName" : "Accountancy and Business Administration ",
+      "degree" : "Dual MAcc/MBA",
+      "university" : "Southern Utah University",
+      "country" : "USA",
+      "programType" : "Master's",
+      "duration" : "2 years",
+      "fees" : "19,018 GBPP",
+      "startMonth" : "September, January, May"
     }
   ],
   "login": [

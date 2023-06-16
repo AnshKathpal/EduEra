@@ -20,7 +20,7 @@ let url = "http://localhost:8080"
 // }
 
 export const getUniversities = async(getUniversityParam?: {
-  params: { country: string[] };
+  params: { country: string[], place : string[] };
 }) => {
     try {
         let res :  AxiosResponse<University[]> = await axios.get(`${url}/universities`,getUniversityParam)
@@ -29,6 +29,20 @@ export const getUniversities = async(getUniversityParam?: {
         console.log(error);
     }
     }
+
+
+    // export const getPrograms = async(getProgramsParam?: {
+    //   params: { country: string[], programType : string[] };
+    // }) => {
+    //     try {
+    //         let res :  AxiosResponse<University[]> = await axios.get(`${url}/programs`,getProgramsParam)
+    //         return res.data;
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    //     }
+
+
 
 
     export const postUniversities = (newUniversity : newUniversity) => (dispatch : Dispatch) => {
