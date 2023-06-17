@@ -29,6 +29,8 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons';
+import { SignUp } from './SignUp';
+import { SignIn } from './SignIn';
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -44,7 +46,7 @@ export default function Navbar() {
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
-        background={"transparent"}
+        // background={"transparent"}
         borderBottom={1}
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
@@ -87,27 +89,8 @@ export default function Navbar() {
           justify={'center'}
           direction={'row'}
           spacing={6}>
-          <Button
-            as={'a'}
-            fontSize={'sm'}
-            fontWeight={400}
-            variant={'link'}
-            href={'#'}>
-            Sign In
-          </Button>
-          <Button
-            as={'a'}
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'#4787f3'}
-            href={'#'}
-            _hover={{
-              bg: '#26a5db',
-            }}>
-            Sign Up
-          </Button>
+         <SignIn/>
+        <SignUp/>
         </Stack>
       </Flex>
 

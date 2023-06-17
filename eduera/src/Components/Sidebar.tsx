@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { getUniversities } from "../redux/University/api";
 
-import { Multiselect } from "multiselect-react-dropdown"
+// import { Multiselect } from "multiselect-react-dropdown"
 
 
 import {
