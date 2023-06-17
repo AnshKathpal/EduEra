@@ -3,8 +3,10 @@ import React from "react";
 import * as types from "../Constraints/types";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
-import { getUniversities } from "../redux/University/api";
+// import { getUniversities } from "../redux/University/api";
+import { getPrograms } from "../redux/Programs/api";
 
+import { Multiselect } from "multiselect-react-dropdown"
 
 
 import {
@@ -17,17 +19,17 @@ import {
   ModalCloseButton,
 } from '@chakra-ui/react'
 
-export const Sidebar = () => {
+export const SidebarPrograms = () => {
 
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [searchParams, setSearchParams] = useSearchParams();
   const initialCountryValues = searchParams.getAll("country");
-  const initialPlaceValues = searchParams.getAll("place");
+  const initialPlaceValues = searchParams.getAll("programName");
   const [countryValues, setCountryValues] = useState<string[]>(
     initialCountryValues || []
   );
-  const [placeValues, setPlaceValues] = useState<string[]>(
+  const [programValues, setProgramValues] = useState<string[]>(
     initialPlaceValues || []
   );
 
@@ -39,12 +41,12 @@ export const Sidebar = () => {
     setCountryValues(selectedValues);
   };
 
-  const handlePlaceValues = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleprogramValues = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValues = Array.from(
       event.target.selectedOptions,
       (option) => option.value
     );
-    setPlaceValues(selectedValues);
+    setProgramValues(selectedValues);
   };
 
   useEffect(() => {
@@ -54,10 +56,10 @@ export const Sidebar = () => {
   }, [countryValues]);
 
   useEffect(() => {
-    let params: { place?: string[] } = {};
-    if (placeValues.length) params.place = placeValues;
+    let params: { programType?: string[] } = {};
+    if (programValues.length) params.programType = programValues;
     setSearchParams(params);
-  }, [placeValues]);
+  }, [programValues]);
 
   return (
 
@@ -84,11 +86,10 @@ export const Sidebar = () => {
         <option value="Japan">Japan</option>
       </select>
 
-      <select value={placeValues} onChange={handlePlaceValues}>
-        <option value="">Select City</option>
-        <option value="Oxford">Oxford</option>
-        <option value="Cambridge">Cambridge</option>
-        <option value="Pasadena">Pasadena</option>
+      <select value={programValues} onChange={handleprogramValues}>
+        <option value="">Select Program Type</option>
+        <option value="Bachelor's">Bachelor's</option>
+        <option value="Master's">Master's</option>
       </select>
 
 

@@ -2,19 +2,19 @@ import { Programs } from "../../Constraints/types";
 import { AppDispatch } from "../store";
 // import { getUniversities, postUniversities } from "./api";
 import { getPrograms } from "./api";
-import * as types from "./actionTypes";
+import {PROGRAM_REQUEST,PROGRAM_ERROR,GET_PROGRAM_SUCCESS} from "./actionTypes"
 
 
 export interface IProgramRequest {
-  type: typeof types.PROGRAM_REQUEST;
+  type: typeof PROGRAM_REQUEST;
 }
 
 export interface IProgramError {
-  type: typeof types.PROGRAM_ERROR;
+  type: typeof PROGRAM_ERROR;
 }
 
 export interface IGetProgramSuccess {
-  type: typeof types.GET_PROGRAM_SUCCESS;
+  type: typeof GET_PROGRAM_SUCCESS;
   payload: Programs[];
 }
 
@@ -26,15 +26,15 @@ export type AppAction =
   | IGetProgramSuccess
 
   const programRequest = (): IProgramRequest => {
-    return {type :  types.PROGRAM_REQUEST}
+    return {type :  PROGRAM_REQUEST}
   }
 
   const programError = (): IProgramError => {
-    return {type :  types.PROGRAM_ERROR}
+    return {type : PROGRAM_ERROR}
   }
 
 const getProgramSuccess = (data : Programs[]): IGetProgramSuccess =>{
-    return {type : types.GET_PROGRAM_SUCCESS, payload : data}
+    return {type : GET_PROGRAM_SUCCESS, payload : data}
 }
 
 

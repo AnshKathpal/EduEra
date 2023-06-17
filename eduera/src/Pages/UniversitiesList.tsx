@@ -24,6 +24,7 @@ import { UniversityCard } from "../Components/UniversityCard";
 import { newUniversity } from "../Constraints/types";
 import { Sidebar } from "../Components/Sidebar";
 import { useLocation, useSearchParams } from "react-router-dom";
+import Navbar from "../Components/Navbar"
 
 export const UniversitiesList = () => {
   const dispatch = useAppDispatch();
@@ -45,10 +46,10 @@ export const UniversitiesList = () => {
         },
       };
 
-      const universities = await getUniversities(getUniversityParams);
+      const universitiesList = await getUniversities(getUniversityParams);
       const action: AppAction = {
         type: "GET_UNIVERSITY_SUCCESS",
-        payload: universities || [],
+        payload: universitiesList || [],
       };
       dispatch(action);
     } catch (error) {
@@ -76,7 +77,11 @@ export const UniversitiesList = () => {
   return (
     <div style = {{backgroundColor :"rgb(244,245,247)"}} >
 
-      <Box border="1px solid red" width="100%" height="80px"></Box>
+      {/* <Box border="1px solid red" width="100%" height="80px"></Box> */}
+
+
+<Navbar />
+
       <Box border="1px solid blue" height="500px"></Box>
       {/* <Box> */}
         <Sidebar />
