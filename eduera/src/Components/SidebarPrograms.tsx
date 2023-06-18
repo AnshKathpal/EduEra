@@ -65,7 +65,7 @@ export const SidebarPrograms = () => {
 
     <>
 
-<Box p={5} border="1px solid red" width="80%" margin="2% auto">
+<Box p={5}  boxShadow=" rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" backgroundColor="white" width="80%" margin="2% auto">
      
 <Flex justifyContent="space-between" >
 <Button onClick={onOpen}>Filter</Button>
@@ -108,7 +108,7 @@ export const SidebarPrograms = () => {
   </ModalContent>
 </Modal>
 
-<input placeholder="Search Universities" />
+<input style ={{border : "1px solid gray" , width : "30%", textAlign : "center"}} placeholder="Search Programs" />
     
 
 <Button>
