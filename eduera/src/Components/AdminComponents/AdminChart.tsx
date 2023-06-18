@@ -6,14 +6,24 @@ const ChartContainer = styled.div`
 margin:20px;
 padding:20px;
 -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.1);
-box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.1);
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `
 
 const ChartTitle = styled.h3`
 margin-bottom: 20px;
 `
+type UserData = {
+   students: number;
+   faculty: number;
+ };
+type AdminData = {
+   title : string;
+   data : UserData[];
+   dataKey : keyof UserData;
+   grid : boolean
+}
 
-export const AdminChart = ({title,data,dataKey,grid}) =>{
+export const AdminChart = ({title,data,dataKey,grid} : AdminData) =>{
     return(
        <ChartContainer>
         <ChartTitle>{title}</ChartTitle>

@@ -1,14 +1,16 @@
 import { applyMiddleware, combineReducers, legacy_createStore } from "redux";
 import {reducer as authReducer} from "./Authentication/reducer"
-// import {reducer as programeReducer} from "./Programs/reducer"
+import {reducer as programeReducer} from "./Programs/reducer"
 import {reducer as universitiesReducer} from "./University/reducer"
 import thunk from "redux-thunk";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import { reducer as adminReducer } from "./AdminReducer/reducer";
 
 const rootReducer = combineReducers({
     authReducer,
-    // programeReducer,
+    programeReducer,
     universitiesReducer,
+    adminReducer
 })
 
 export const store = legacy_createStore(rootReducer, applyMiddleware(thunk));

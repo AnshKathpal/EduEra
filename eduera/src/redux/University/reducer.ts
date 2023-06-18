@@ -1,4 +1,11 @@
-import { GET_UNIVERSITY_SUCCESS, POST_UNIVERSITY_SUCCESS , UNIVERSITY_ERROR, UNIVERSITY_REQUEST, EDIT_UNIVERSITY, DELETE_UNIVERSITY } from "./actionTypes";
+import {
+  GET_UNIVERSITY_SUCCESS,
+  POST_UNIVERSITY_SUCCESS,
+  UNIVERSITY_ERROR,
+  UNIVERSITY_REQUEST,
+  EDIT_UNIVERSITY,
+  DELETE_UNIVERSITY,
+} from "./actionTypes";
 import { AppAction } from "./action";
 import { University } from "../../Constraints/types";
 
@@ -6,9 +13,9 @@ export interface IUniversityState {
   loading: boolean;
   error: boolean;
   data: University[];
-};
+}
 
-const initialState = {
+const initialState : IUniversityState = {
   loading: false,
   error: false,
   data: [],
@@ -22,11 +29,13 @@ export const reducer = (
 
   switch (type) {
     case UNIVERSITY_REQUEST:
-      return { ...oldState, loading: true }
+      return { ...oldState, loading: true };
     case UNIVERSITY_ERROR:
-      return { ...oldState, loading: false, error: true }
+      return { ...oldState, loading: false, error: true };
     case GET_UNIVERSITY_SUCCESS:
-      return { ...oldState, loading: false, data: action.payload }
+      return { ...oldState, loading: false, data: action.payload };
+    // case POST_UNIVERSITY_SUCCESS:
+    //   return { ...oldState, loading: false, data: [...oldState.data, action.payload] };
     default:
       return oldState;
   }

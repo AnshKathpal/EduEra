@@ -7,48 +7,56 @@ const AdminSidebar = () => {
     return (
         <SidebarContainer>
             <SidebarWrapper>
+                <Logo>
+                <LogoImage src="/useEduEra.png" alt="Logo" />
+                </Logo>
+                
                 <SidebarMenu>
                     <SidebarTitle>Dashboard</SidebarTitle>
                     <SidebarList>
-                       <Link to="/admin" className='link'>
+                       <Link to="/admin" className='link' style={{ textDecoration: 'none',color:"grey"}}>
                             <SidebarListItem>
                                 <MyLineStyle />
                                 Home
                             </SidebarListItem>
                       </Link>
-                        <SidebarListItem>
+
+                      <Link to="/AdminAnalytics">
+                      <SidebarListItem>
                             <MyTimeline />
                             Analytics
                         </SidebarListItem>
-                        <SidebarListItem>
+                      </Link>
+                        
+                        {/* <SidebarListItem>
                             <MyTrendingUp />
                             Sales
-                        </SidebarListItem>
+                        </SidebarListItem> */}
                     </SidebarList>
                 </SidebarMenu>
                 <SidebarMenu>
                     <SidebarTitle>All Menu</SidebarTitle>
                     <SidebarList>
-                            <Link to="/users" className='link'>
+                            <Link to="/adminuni" className='link'  style={{ textDecoration: 'none',color:"grey"}}>
                             <SidebarListItem>
                                 <MyPermIdentity />
                                 Universities
                             </SidebarListItem>
                             </Link>
-                            <Link to="/newUser" className='link'>
+                            <Link to="/newUser" className='link'  style={{ textDecoration: 'none',color:"grey"}}>
                             <SidebarListItem>
                                 <MyStorefront />
                                 Add University
                             </SidebarListItem>
                             </Link>
-                        <SidebarListItem>
-                            <MyAssessment />
-                            Reports
-                        </SidebarListItem>
-                        <SidebarListItem>
+                            
+
+                           
+                        
+                        {/* <SidebarListItem>
                             <MyLocalAtm />
                             Transactions
-                        </SidebarListItem>
+                        </SidebarListItem> */}
                     </SidebarList>
                 </SidebarMenu>
                 <SidebarMenu>
@@ -71,14 +79,20 @@ const AdminSidebar = () => {
                 <SidebarMenu>
                     <SidebarTitle>Employees</SidebarTitle>
                     <SidebarList>
-                        <SidebarListItem>
+                     <Link to="/adminDetails" className='link' style={{ textDecoration: 'none',color:"grey"}}>
+                     <SidebarListItem>
                             <MyWork />
-                            Manage
+                            Admins
                         </SidebarListItem>
+                     </Link>
+
+                        <Link to="/userAd" className='link' style={{ textDecoration: 'none',color:"grey"}}>
                         <SidebarListItem>
                             <MyPieChart />
-                            Analytics
+                            Add Admin
                         </SidebarListItem>
+                        </Link>
+                        
                         <SidebarListItem>
                             <MyReceipt />
                             Reports
@@ -92,14 +106,19 @@ const AdminSidebar = () => {
 export default AdminSidebar;
 
 const SidebarContainer = styled.div`
-    flex: 1;
-    height: calc(100vh - 50px);
-    background-color: rgb(251, 251, 255);
+    flex:1;
+    
+    height: calc(100vh);
+    // background-color: rgb(251, 251, 255);
     position: sticky;
-    top: 50px;
+    left:10px
+    padding:10px
+    width:200px
 `
 const SidebarWrapper = styled.div`
-    padding: 20px;
+    padding-top:10px;
+    padding-left: 30px;
+    padding-right:30px;
     color: #555;
 `
 const SidebarMenu = styled.div`
@@ -108,6 +127,7 @@ const SidebarMenu = styled.div`
 const SidebarTitle = styled.h3`
     font-size: 13px;
     color: rgb(187, 186, 186);
+    text-align:left
 `
 const SidebarList = styled.ul`
     list-style: none;
@@ -123,10 +143,26 @@ const SidebarListItem = styled.li`
         background-color: rgb(240, 240, 255);
     }
 `
+
+const Logo= styled.div`
+display: flex;
+  align-items: center;
+  height: 60px;
+  
+  
+`
+const LogoImage = styled.img`
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+`;
+
 const sharedStyle = css`
     margin-right: 5px;
     font-size: 20px !important;
 `
+
 const MyLineStyle = styled(LineStyle)`
     ${sharedStyle}
 `

@@ -7,6 +7,12 @@
       "esnext"
     ],
     "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "types/*"
+      ]
+    },
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -21,6 +27,7 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    "videos"
   ]
 }

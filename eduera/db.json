@@ -5,8 +5,8 @@
       "year_of_establishment": 1096,
       "name": "University of Oxford",
       "country": "England",
-      "faculty": 250,
-      "students": 3000,
+      "faculty": "400",
+      "students": "7000",
       "courses": 15,
       "images": [
         "https://images.unsplash.com/photo-1583373834259-46cc92173cb7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dW5pdmVyc2l0eSUyMGNhbXB1c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
@@ -18,18 +18,18 @@
       "rating": "4.2/5",
       "place": "Oxford",
       "category": "university",
-      "brochure":"300"
+      "brochure": "300"
     },
     {
       "id": 2,
       "year_of_establishment": 1209,
       "name": "University of Cambridge",
       "country": "UK",
-      "faculty": 300,
-      "students": 3100,
+      "faculty": "700",
+      "students": "2600",
       "courses": 20,
       "images": [
-        "https://images.unsplash.com/photo-1581362072978-14998d01fdaa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHVuaXZlcnNpdHl8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/20/cambridge.JPG?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
         "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
         "https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dW5pdmVyc2l0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
       ],
@@ -38,7 +38,7 @@
       "rating": "4.2/5",
       "place": "Cambridge",
       "category": "university",
-      "brochure":"500"
+      "brochure": "500"
     },
     {
       "id": 3,
@@ -58,7 +58,7 @@
       "ownership": "Government",
       "rating": "4.2/5",
       "category": "university",
-      "brochure":"400"
+      "brochure": "400"
     },
     {
       "id": 4,
@@ -69,7 +69,9 @@
       "students": "6000",
       "courses": "32",
       "images": [
-        "https://images.unsplash.com/photo-1569447891824-7a1758aa73a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHVuaXZlcnNpdHklMjBjYW1wdXN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eSUyMGNhbXB1c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHMlMjB0YWxraW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
+        "https://images.unsplash.com/photo-1569447891824-7a1758aa73a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHVuaXZlcnNpdHklMjBjYW1wdXN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdmVyc2l0eSUyMGNhbXB1c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHMlMjB0YWxraW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60"
       ],
       "flag": "https://t4.ftcdn.net/jpg/00/62/19/83/360_F_62198354_ZMVmTGPrX6RFb9DfEN67As9zhVvlUOpt.jpg",
       "ownership": "private",
@@ -87,7 +89,9 @@
       "students": "25000",
       "courses": "55",
       "images": [
-        "https://images.unsplash.com/photo-1577195943805-d9a2f1c404bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cHVuZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1569878766010-17bff0a1987d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGxpYnJhcnl8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1542868796-20f2ddc9d41f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fHN0dWRlbnRzJTIwdGFsa2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+        "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29sbGVnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/photo-1561089489-f13d5e730d72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fHN0dWRlbnRzJTIwdGFsa2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "https://plus.unsplash.com/premium_photo-1661634136642-7a4d16900f84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzl8fHN0dWRlbnRzJTIwdGFsa2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
       ],
       "flag": "https://t4.ftcdn.net/jpg/00/62/19/83/360_F_62198354_ZMVmTGPrX6RFb9DfEN67As9zhVvlUOpt.jpg",
       "ownership": "Government",
@@ -105,7 +109,9 @@
       "students": "3200",
       "courses": "32",
       "images": [
-        "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29sbGVnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1561089489-f13d5e730d72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fHN0dWRlbnRzJTIwdGFsa2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60","https://plus.unsplash.com/premium_photo-1661634136642-7a4d16900f84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzl8fHN0dWRlbnRzJTIwdGFsa2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
+        "https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y29sbGVnZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/photo-1561089489-f13d5e730d72?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fHN0dWRlbnRzJTIwdGFsa2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "https://plus.unsplash.com/premium_photo-1661634136642-7a4d16900f84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nzl8fHN0dWRlbnRzJTIwdGFsa2luZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
       ],
       "flag": "https://t4.ftcdn.net/jpg/00/62/19/83/360_F_62198354_ZMVmTGPrX6RFb9DfEN67As9zhVvlUOpt.jpg",
       "ownership": "private",
@@ -122,7 +128,11 @@
       "faculty": "150",
       "students": "22000",
       "courses": "35",
-      "images": ["https://images.unsplash.com/photo-1622604647545-0cada2f34470?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80","https://images.unsplash.com/photo-1531496730074-83b638c0a7ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"],
+      "images": [
+        "https://images.unsplash.com/photo-1622604647545-0cada2f34470?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        "https://images.unsplash.com/photo-1531496730074-83b638c0a7ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+      ],
       "flag": "https://www.shutterstock.com/image-illustration/waving-world-flags-silk-satin-260nw-1655518777.jpg",
       "ownership": "Government",
       "rating": "4.7/5",
@@ -138,7 +148,11 @@
       "faculty": "250",
       "students": "22000",
       "courses": "22",
-      "images": ["https://images.unsplash.com/photo-1666243035395-9b7853cecc05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNhbXB1cyUyMHVuaXZlcnNpdGFyaW98ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60","https://images.unsplash.com/photo-1552900651-b2a53060a085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80","https://images.unsplash.com/photo-1651322408059-c898b35b9a14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhbXB1cyUyMHVuaXZlcnNpdGFyaW98ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"],
+      "images": [
+        "https://images.unsplash.com/photo-1666243035395-9b7853cecc05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGNhbXB1cyUyMHVuaXZlcnNpdGFyaW98ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+        "https://images.unsplash.com/photo-1552900651-b2a53060a085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80",
+        "https://images.unsplash.com/photo-1651322408059-c898b35b9a14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhbXB1cyUyMHVuaXZlcnNpdGFyaW98ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+      ],
       "flag": "https://www.shutterstock.com/image-illustration/waving-world-flags-silk-satin-260nw-1655518777.jpg",
       "ownership": "Government",
       "rating": "4.7/5",
@@ -154,7 +168,11 @@
       "faculty": "554",
       "students": "14000",
       "courses": "25",
-      "images": ["https://images.unsplash.com/photo-1532457239977-d10462f33c4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80","https://images.unsplash.com/photo-1552900651-b2a53060a085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80","https://images.unsplash.com/photo-1651322408059-c898b35b9a14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhbXB1cyUyMHVuaXZlcnNpdGFyaW98ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"],
+      "images": [
+        "https://images.unsplash.com/photo-1532457239977-d10462f33c4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "https://images.unsplash.com/photo-1552900651-b2a53060a085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80",
+        "https://images.unsplash.com/photo-1651322408059-c898b35b9a14?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhbXB1cyUyMHVuaXZlcnNpdGFyaW98ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60"
+      ],
       "flag": "https://www.shutterstock.com/image-illustration/waving-world-flags-silk-satin-260nw-1655518777.jpg",
       "ownership": "Government",
       "rating": "4.7/5",
@@ -171,7 +189,9 @@
       "students": "2200",
       "courses": "11",
       "images": [
-        "https://images.unsplash.com/photo-1610962381137-50ef93055125?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80","https://images.unsplash.com/photo-1463592177119-bab2a00f3ccb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80","https://images.unsplash.com/photo-1616402455550-9b3856740f21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80"
+        "https://images.unsplash.com/photo-1610962381137-50ef93055125?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+        "https://images.unsplash.com/photo-1463592177119-bab2a00f3ccb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80",
+        "https://images.unsplash.com/photo-1616402455550-9b3856740f21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80"
       ],
       "flag": "https://t4.ftcdn.net/jpg/00/62/19/83/360_F_62198354_ZMVmTGPrX6RFb9DfEN67As9zhVvlUOpt.jpg",
       "ownership": "private",
@@ -243,15 +263,15 @@
       "students": 20000,
       "courses": 250,
       "images": [
-                  "https://tse3.mm.bing.net/th?id=OIP.YSMhkGqxLNTMuv3hK8MITQHaFj&pid=Api&P=0"
-          ],
-          "flag": "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
-                "ownership": "private",
-                "rating": 4.5,
-                "place": "Agra",
-                "category": "school",
-                "brochure": 130
-              },
+        "https://tse3.mm.bing.net/th?id=OIP.YSMhkGqxLNTMuv3hK8MITQHaFj&pid=Api&P=0"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
+      "ownership": "private",
+      "rating": 4.5,
+      "place": "Agra",
+      "category": "school",
+      "brochure": 130
+    },
     {
       "id": 15,
       "year_of_establishment": 2000,
@@ -371,8 +391,9 @@
       "students": 15000,
       "courses": 200,
       "images": [
+        "https://tse3.mm.bing.net/th?id=OIP.m_ncGuXHF9HfzdjWHtAYYQHaEo&pid=Api&P=0"
       ],
-      "flag": "https://t4.ftcdn.net/jpg/00/62/19/83/360_F_62198354_ZMVmTGPrX6RFb9DfEN67As9zhVvlUOpt.jpg",
+      "flag": "https://tse3.mm.bing.net/th?id=OIP.m_ncGuXHF9HfzdjWHtAYYQHaEo&pid=Api&P=0",
       "ownership": "private",
       "rating": 4.5,
       "place": "New York",
@@ -388,8 +409,9 @@
       "students": 20000,
       "courses": 150,
       "images": [
+        "https://tse3.mm.bing.net/th?id=OIP.m_ncGuXHF9HfzdjWHtAYYQHaEo&pid=Api&P=0"
       ],
-      "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png",
+      "flag": "https://tse3.mm.bing.net/th?id=OIP.m_ncGuXHF9HfzdjWHtAYYQHaEo&pid=Api&P=0",
       "ownership": "Government",
       "rating": 4.5,
       "place": "California",
@@ -433,60 +455,60 @@
       "brochure": 150
     },
     {
-"id": 25,
-"year_of_establishment": 1965,
-"name": "European Business School",
-"country": "Japan",
-"faculty": 150,
-"students": 10000,
-"courses": 100,
-"images": [
-"https://tse1.mm.bing.net/th?id=OIP.LQnsgZ2CmsRhvazz4wE-twHaDH&pid=Api&P=0"
-],
-"flag": "https://www.shutterstock.com/image-illustration/waving-world-flags-silk-satin-260nw-1655518777.jpg",
-"ownership": "private",
-"rating": 4.7,
-"place": "Berlin",
-"category": "Business School",
-"brochure": 200
-},
-{
-"id": 26,
-"year_of_establishment": 1980,
-"name": "Tokyo University",
-"country": "Japan",
-"faculty": 400,
-"students": 25000,
-"courses": 250,
-"images": [
-"https://i.pinimg.com/originals/c9/d2/84/c9d284e5c2bdcdaa793dc118fcb4f92e.jpg"
-],
-"flag": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg",
-"ownership": "Government",
-"rating": "4.5/5",
-"place": "Tokyo",
-"category": "university",
-"brochure": 180
-},
-{
-"id": 27,
-"year_of_establishment": 1995,
-"name": "National University of England",
-"country": "England",
-"faculty": 500,
-"students": 30000,
-"courses": 300,
-"images": [
-"https://tse2.mm.bing.net/th?id=OIP.2fGiCWXxTndhhfCnXauR-AHaE8&pid=Api&P=0"
-],
-"flag": "https://t4.ftcdn.net/jpg/01/71/57/89/360_F_171578974_eNhE6sEpc6jsK6Py7IxhTbIZZQ7878Wb.jpg",
-"ownership": "Government",
-"rating": "4.6/5",
-"place": "Singapore",
-"category": "university",
-"brochure": 220
-},
- {
+      "id": 25,
+      "year_of_establishment": 1965,
+      "name": "European Business School",
+      "country": "Japan",
+      "faculty": 150,
+      "students": 10000,
+      "courses": 100,
+      "images": [
+        "https://tse1.mm.bing.net/th?id=OIP.LQnsgZ2CmsRhvazz4wE-twHaDH&pid=Api&P=0"
+      ],
+      "flag": "https://www.shutterstock.com/image-illustration/waving-world-flags-silk-satin-260nw-1655518777.jpg",
+      "ownership": "private",
+      "rating": 4.7,
+      "place": "Berlin",
+      "category": "Business School",
+      "brochure": 200
+    },
+    {
+      "id": 26,
+      "year_of_establishment": 1980,
+      "name": "Tokyo University",
+      "country": "Japan",
+      "faculty": 400,
+      "students": 25000,
+      "courses": 250,
+      "images": [
+        "https://i.pinimg.com/originals/c9/d2/84/c9d284e5c2bdcdaa793dc118fcb4f92e.jpg"
+      ],
+      "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg",
+      "ownership": "Government",
+      "rating": "4.5/5",
+      "place": "Tokyo",
+      "category": "university",
+      "brochure": 180
+    },
+    {
+      "id": 27,
+      "year_of_establishment": 1995,
+      "name": "National University of England",
+      "country": "England",
+      "faculty": 500,
+      "students": 30000,
+      "courses": 300,
+      "images": [
+        "https://tse2.mm.bing.net/th?id=OIP.2fGiCWXxTndhhfCnXauR-AHaE8&pid=Api&P=0"
+      ],
+      "flag": "https://t4.ftcdn.net/jpg/01/71/57/89/360_F_171578974_eNhE6sEpc6jsK6Py7IxhTbIZZQ7878Wb.jpg",
+      "ownership": "Government",
+      "rating": "4.6/5",
+      "place": "Singapore",
+      "category": "university",
+      "brochure": 220
+    },
+    {
       "id": 28,
       "year_of_establishment": 2001,
       "name": "Central University",
@@ -539,45 +561,63 @@
       "place": "London",
       "category": "university",
       "brochure": 100
+    }
+  ],
+  "programs": [
+    {
+      "id": 1,
+      "image": "https://images.studee.com/images/university/university__academy-of-information-technology--logo.png?ixlib=js-2.3.2&auto=format&fit=crop&q=35&w=85&h=85",
+      "programName": "2D Animation (Melbourne Campus)",
+      "degree": "BAnim",
+      "university": "AIT Academy of Interactive Technology",
+      "country": "Australia",
+      "programType": "Bachelor's",
+      "duration": "3 years",
+      "fees": "8,527 GBP",
+      "startMonth": "February, May, September"
     },
     {
-      "id": 31,
-      "year_of_establishment": 1978,
-      "name": "State Polytechnic",
-      "country": "England",
-      "faculty": 150,
-      "students": 12000,
-      "courses": 90,
-      "images": [
-        "https://tse3.mm.bing.net/th?id=OIP.v__pW21IxvMAZxeTbO5NiAHaEb&pid=Api&P=0"
-],
-   "flag" : "https://t4.ftcdn.net/jpg/01/71/57/89/360_F_171578974_eNhE6sEpc6jsK6Py7IxhTbIZZQ7878Wb.jpg",
-"ownership": "private",
-      "rating": 4.6,
-      "place": "London",
-      "category": "university",
-      "brochure": 100
-}
-  ],
-  "programs" : [
+      "id": 2,
+      "image": "https://images.studee.com/images/university/university__new-york-film-academy--logo.png?ixlib=js-2.3.2&auto=format&fit=crop&q=35&w=85&h=85",
+      "programName": "3D Animation and VFX",
+      "degree": "BFA",
+      "university": "New York Film Academy",
+      "country": "USA",
+      "programType": "Bachelor's",
+      "duration": "3 years",
+      "fees": "21,858 GBP",
+      "startMonth": "August, January, May"
+    },
     {
-      "id" : 1,
-      "image" : "",
-      "programName" : "",
-      "degree" : "",
-      "university" : "",
-      "country" : "",
-      "programType" : "",
-      "duration" : "",
-      "fees" : "",
-      "startMonth" : ""
+      "id": 3,
+      "image": "https://images.studee.com/images/university/university__university-of-north-carolina-wilmington--logo.svg?ixlib=js-2.3.2&auto=format&fit=crop&q=35&w=85&h=85",
+      "programName": "Accelerated Plus (Digital)",
+      "degree": "PGP",
+      "university": "AIT Academy of Interactive Technology",
+      "country": "Postgraduate pathway",
+      "programType": "Bachelor's",
+      "duration": "6 months",
+      "fees": "8,527 GBP",
+      "startMonth": "September"
+    },
+    {
+      "id": 4,
+      "image": "https://images.studee.com/images/university/university__southern-utah-university--logo.svg?ixlib=js-2.3.2&auto=format&fit=crop&q=35&w=85&h=85",
+      "programName": "Accountancy and Business Administration ",
+      "degree": "Dual MAcc/MBA",
+      "university": "Southern Utah University",
+      "country": "USA",
+      "programType": "Master's",
+      "duration": "2 years",
+      "fees": "19,018 GBPP",
+      "startMonth": "September, January, May"
     }
   ],
   "login": [
     {
       "id": 1,
       "username": "ansh",
-      "email" : "anshkathpal17@gmail.com",
+      "email": "anshkathpal17@gmail.com",
       "password": "ansh"
     }
   ],
