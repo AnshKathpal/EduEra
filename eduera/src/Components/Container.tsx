@@ -27,7 +27,7 @@ export default function Container() {
         <Box>
             <Box h={"90px"} w={"100%"} bgColor={"#898a88"}></Box>
 
-            <Flex style={containerStyle} h={"auto"} width={"100%"} margin={"auto"} mb={"3%"} pb={"5%"}>
+            <Flex  style={containerStyle} h={{base:"100%",sm:"50vh",md:"100vh"}} width={"100%"} margin={"auto"} mb={"3%"} pb={"5%"}>
 
                 <Box pt={"10%"} w={"50%"}>
                     <Text>
