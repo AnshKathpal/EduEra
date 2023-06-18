@@ -39,9 +39,9 @@ export const SignIn= ()=> {
           <ModalContent>
             <ModalHeader>SignIn</ModalHeader>
             <ModalCloseButton />
-            <ModalBody>
+            <ModalBody p={"7%"}>
             <Flex
-        minH={'60vh'}
+        minH={'100%'}
         align={'center'}
         justify={'center'}
         bg={useColorModeValue('gray.50', 'gray.800')}>

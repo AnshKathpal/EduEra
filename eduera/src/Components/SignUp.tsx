@@ -290,7 +290,7 @@ const Form3 = () => {
   const [progress, setProgress] = useState(33.33);
  
     return (
-      <>
+      <Box display={{ base: "none", md: "block" }}>
         <Button onClick={onOpen}>SignUp</Button>
   
         <Modal isOpen={isOpen} onClose={onClose}>
@@ -375,7 +375,7 @@ const Form3 = () => {
             </ModalFooter> */}
           </ModalContent>
         </Modal>
-      </>
+      </Box>
     )
   }
 

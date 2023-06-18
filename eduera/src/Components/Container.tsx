@@ -14,56 +14,59 @@ export default function Container() {
     const containerStyle = {
         backgroundImage: `url(${imageone})`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
+        backgroundSize: '100% 120%',
+    
 
 
     };
     const opts: YouTubeProps['opts'] = {
-        height: '250',
-        width: '400',
+        height: '130%',
+        width: '100%',
     };
     return (
-        <Box mt={"5%"} >
+        <Box>
+            <Box h={"90px"} w={"100%"} bgColor={"#898a88"}></Box>
 
-            <Flex style={containerStyle} h={"90vh"} width={"100%"} margin={"auto"} mb={"3%"}>
+            <Flex style={containerStyle} h={"auto"} width={"100%"} margin={"auto"} mb={"3%"} pb={"5%"}>
 
                 <Box pt={"10%"} w={"50%"}>
                     <Text>
-                        <Text color={"#13394e"} as={"b"} fontSize='8xl'>Edu </Text>
-                        <Text color={"white"} as={"b"} fontSize='8xl'> Era</Text>
+                        <Text color={"#13394e"} as={"b"} fontSize={{ base: "4xl", md: "8xl" }} >Edu </Text>
+                        <Text color={"white"} as={"b"} fontSize={{ base: "4xl", md: "8xl" }}> Era</Text>
                     </Text>
-                    <Text textAlign="start" color={"white"} as={"b"} fontSize='4xl' >
-                        Service N°1 for the <br />
+                    <Text textAlign="start" color={"white"} as={"b"} fontSize={{ base: "xl", md: "3xl" }} >
+                        Service No. 1 for the <br />
                         selection of educational <br />
                         programs abroad
                     </Text>
-                    <Flex mt={"5%"} ml={"7%"}>
-                        <Select border={"0px solid white"} borderRadius={"0"} w={"200px"} backgroundColor={"white"} placeholder='Country of Study'>
+                    <Flex mt={"5%"} ml={"7%"} flexDirection={{base:"column",md:"row"}}  >
+                        <Select opacity={"0.7"} borderRadius={"0"} w={"200px"} backgroundColor={"white"} placeholder='Country of Study'>
                             <option value='option1'>Option 1</option>
-                            <option value='option2'>Option 2</option>
-                            <option value='option3'>Option 3</option>
+                            <option  value='option2'>Option 2</option>
+                            <option  value='option3'>Option 3</option>
                         </Select>
-                        <Select borderRadius={"0"} w={"200px"} backgroundColor={"white"} placeholder='Type of Training'>
-                            <option value='option1'>Option 1</option>
-                            <option value='option2'>Option 2</option>
-                            <option value='option3'>Option 3</option>
+                        <Select opacity={"0.7"}  borderRadius={"0"} w={"200px"} backgroundColor={"white"} placeholder='Type of Training'>
+                            <option  value='option1'>Option 1</option>
+                            <option  value='option2'>Option 2</option>
+                            <option  value='option3'>Option 3</option>
                         </Select>
-                        <Select borderRadius={"0"} w={"200px"} backgroundColor={"white"} placeholder='Program'>
-                            <option value='option1'>Option 1</option>
-                            <option value='option2'>Option 2</option>
-                            <option value='option3'>Option 3</option>
+                        <Select opacity={"0.7"} borderRadius={"0"} w={"200px"} backgroundColor={"white"} placeholder='Program'>
+                            <option  value='option1'>Option 1</option>
+                            <option  value='option2'>Option 2</option>
+                            <option  value='option3'>Option 3</option>
                         </Select>
-                        <Button w={"20%"} borderRadius={"0"} bgColor={'#4787f3'}>Show</Button>
+                        <Button  opacity={"0.9"} w={"200px"} borderRadius={"0"} bgColor={'#4787f3'}>Show</Button>
                     </Flex>
                 </Box>
 
 
             </Flex>
-            <Flex w={"95%"} m={"auto"} h={"60vh"}>
-                <Flex justifyContent={"center"} alignItems={"center"} w={"50%"} bgColor={"#4787f3"} >
+            <Flex w={"95%"} m={"auto"} h={{base:"100%",md:"100%"}}  direction={{base:'column',md:'row'}} 
+            >
+                <Flex justifyContent={"center"} alignItems={"center"} w={{base:"100%",md:"50%"}} bgColor={"#4787f3"} >
                     <Box textAlign={"center"} w={"55%"} >
 
-                        <Text color={"white"} as={"b"} fontSize='6xl'>Advantage of Eduera</Text>
+                        <Text color={"white"} as={"b"} fontSize={{ base: "3xl", md: "6xl" }}>Advantage of Eduera</Text>
                         <UnorderedList lineHeight={"200%"} color={"white"}>
                             <ListItem >1 application at the same time in 7 universities</ListItem>
                             <ListItem>Free online support</ListItem>
@@ -72,81 +75,81 @@ export default function Container() {
                         </UnorderedList>
                     </Box>
                 </Flex>
-                <Box w={"50%"}>
+                <Box w={{base:"100%",md:"50%"}}>
                     <Image h={"100%"} w={"100%"} src={imagethree}></Image>
                 </Box>
             </Flex>
             <Box m={"auto"} w={"90%"} mb={"5%"} p={"2%"} h={"auto"}>
-                <Box mb={"4%"} textAlign={"start"}><Text fontSize='4xl' as={"b"} className='colorprop'>4 steps for admission </Text></Box>
+                <Box mb={"4%"} textAlign={"start"}><Text fontSize={{base:"2xl", md:"4xl"}} as={"b"} className='colorprop'>4 steps for admission </Text></Box>
                 <Flex mb={"3%"} justifyContent={"space-around"} >
                     <Text className='option'>1. Choose </Text>
                     <Text className='option'>2. Get Ready</Text>
                     <Text className='option'>3. Register</Text>
                     <Text className='option'>4. Submit Documents</Text>
                 </Flex>
-                <Flex justifyContent={"space-around"} w={"100%"}>
-                    <Box lineHeight={"300%"} w={"50%"} textAlign={"start"}>
+                <Flex justifyContent={"space-around"} w={"100%"} direction={{base:"column",md:"row"}}>
+                    <Box lineHeight={"300%"} w={{base:"100%",md:"50%"}} textAlign={"start"}>
                         <Text mb={"2%"} fontSize='3xl' className='colorprop'>Choosing an educational institution</Text>
                         <Text fontSize='xl'>Before you start choosing an educational institution, you should critically assess the level of your academic achievements and success. If you want to enter a prestigious university, you must have an appropriately high academic level. If you feel that your knowledge is not enough, you can choose preparatory courses or college. It is important not to overestimate your knowledge, because the load will be huge if you are in an unfamiliar country, in an unusual enviroment, in a diffrent language. </Text>
                     </Box>
-                    <Box w={"40%"}>
+                    <Box w={{base:"100%",md:"50%"}}>
                         <Flex className='education' justifyContent={"center"} alignItems={"center"} w={"50%"} h={"20%"} m={"auto"} mt={"4%"} border={"1px solid #4787f3"}><Text as={"b"}>Higher Education</Text></Flex>
                         <Flex className='education' justifyContent={"center"} alignItems={"center"} w={"50%"} h={"20%"} m={"auto"} mt={"4%"} border={"1px solid #4787f3"}><Text as={"b"}>Secondary Education</Text></Flex>
                         <Flex className='education' justifyContent={"center"} alignItems={"center"} w={"50%"} h={"20%"} m={"auto"} mt={"4%"} border={"1px solid #4787f3"}><Text as={"b"}>Language Classes</Text></Flex>
                     </Box>
                 </Flex>
             </Box>
-            <Box m={"auto"} w={"90%"} h={"95vh"}>
+            <Box m={"auto"} w={"90%"} h={{base:"100%",md:"100%"}} mb={"5%"}>
                 <Tabs>
                     <TabList>
                         <Flex w={"100%"} justifyContent={"space-evenly"}>
 
-                            <Tab><Text as={"b"} fontSize='xl' className='colorprop'>Higher Education</Text></Tab>
-                            <Tab><Text as={"b"} fontSize='xl' className='colorprop'>Secondary Education</Text></Tab>
-                            <Tab><Text as={"b"} fontSize='xl' className='colorprop'>Language Classes</Text></Tab>
+                            <Tab><Text as={"b"} fontSize={{base:"l",md:"xl"}} className='colorprop'>Higher Education</Text></Tab>
+                            <Tab><Text as={"b"} fontSize={{base:"l",md:"xl"}} className='colorprop'>Secondary Education</Text></Tab>
+                            <Tab><Text as={"b"} fontSize={{base:"l",md:"xl"}} className='colorprop'>Language Classes</Text></Tab>
                         </Flex>
                     </TabList>
 
                     <TabPanels>
                         <TabPanel>
 
-                            <Grid templateColumns='repeat(4, 1fr)' gap={6}>
-                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"auto"} >
+                            <Grid templateColumns={{base:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(4, 1fr)'}} gap={6}>
+                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"270px"} >
                                     <Image w={"100%"} h={"80%"} borderRadius={"5% 5% 0 0"} src="https://images.pexels.com/photos/161074/vienna-st-charles-s-church-downtown-church-161074.jpeg?auto=compress&cs=tinysrgb&w=400"></Image>
                                     <Text fontSize={"xl"}>Austria</Text>
                                     <Text>27 faculties</Text>
                                 </GridItem>
-                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"auto"} >
+                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"270px"} >
                                     <Image w={"100%"} h={"80%"} borderRadius={"5% 5% 0 0"} src="https://images.pexels.com/photos/2434267/pexels-photo-2434267.jpeg?auto=compress&cs=tinysrgb&w=400"></Image>
                                     <Text fontSize={"xl"}>Australia</Text>
                                     <Text>34 faculties</Text>
                                 </GridItem>
-                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"auto"} >
+                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"270px"} >
                                     <Image w={"100%"} h={"80%"} borderRadius={"5% 5% 0 0"} src="https://images.pexels.com/photos/5215090/pexels-photo-5215090.jpeg?auto=compress&cs=tinysrgb&w=400"></Image>
                                     <Text fontSize={"xl"}>Belgium</Text>
                                     <Text>28 faculties</Text>
                                 </GridItem>
-                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"auto"} >
+                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"270px"} >
                                     <Image w={"100%"} h={"80%"} borderRadius={"5% 5% 0 0"} src="https://images.pexels.com/photos/16149657/pexels-photo-16149657/free-photo-of-clouds-over-buildings-around-tower-bridge.jpeg?auto=compress&cs=tinysrgb&w=400"></Image>
                                     <Text fontSize={"xl"}>Great Britain</Text>
                                     <Text>43 faculties</Text>
                                 </GridItem>
-                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"auto"} >
+                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"270px"} >
                                     <Image w={"100%"} h={"80%"} borderRadius={"5% 5% 0 0"} src="https://images.pexels.com/photos/1128416/pexels-photo-1128416.jpeg?auto=compress&cs=tinysrgb&w=400"></Image>
                                     <Text fontSize={"xl"}>Germany</Text>
                                     <Text>58 faculties</Text>
                                 </GridItem>
-                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"auto"} >
+                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"270px"} >
                                     <Image w={"100%"} h={"80%"} borderRadius={"5% 5% 0 0"} src="https://images.pexels.com/photos/416024/pexels-photo-416024.jpeg?auto=compress&cs=tinysrgb&w=400"></Image>
                                     <Text fontSize={"xl"}>Denmark</Text>
                                     <Text>22 faculties</Text>
                                 </GridItem>
-                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"auto"} >
+                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"270px"} >
                                     <Image w={"100%"} h={"80%"} borderRadius={"5% 5% 0 0"} src="https://images.pexels.com/photos/532263/pexels-photo-532263.jpeg?auto=compress&cs=tinysrgb&w=400"></Image>
                                     <Text fontSize={"xl"}>Italy</Text>
                                     <Text>40 faculties</Text>
                                 </GridItem>
-                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"auto"} >
+                                <GridItem borderRadius={"5%"} className='education' w='100%' bg='white' h={"270px"} >
                                     <Image w={"100%"} h={"80%"} borderRadius={"5% 5% 0 0"} src="https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg?auto=compress&cs=tinysrgb&w=400"></Image>
                                     <Text fontSize={"xl"}>Spain</Text>
                                     <Text>52 faculties</Text>
@@ -166,12 +169,12 @@ export default function Container() {
                     </TabPanels>
                 </Tabs>
             </Box>
-            <Flex w={"90%"} m={"auto"}>
-                <Box w={"30%"}>
+            <Flex w={"90%"} m={"auto"} direction={{base:"column",md:"row"}}>
+                <Box w={{base:"100%",md:"30%"}}>
 
-                    <Image w={"90%"} h={"78%"} src='https://images.pexels.com/photos/1181547/pexels-photo-1181547.jpeg?auto=compress&cs=tinysrgb&w=400' />
+                    <Image w={"100%"} h={"78%"} src='https://images.pexels.com/photos/1181547/pexels-photo-1181547.jpeg?auto=compress&cs=tinysrgb&w=400' />
                 </Box>
-                <Box w={"70%"} h={"100%"}  >
+                <Box  w={{base:"100%",md:"70%"}} h={"100%"}  >
                     <Text className='colorprop' fontSize={"3xl"} as={"b"}>Faculties choose yours</Text>
                     <Flex w={"100%"}>
                         <Box lineHeight={"400%"} w={"50%"}>
@@ -195,7 +198,7 @@ export default function Container() {
             </Flex>
             <Box w={"90%"} m={"auto"} >
                 <Text className='colorprop' as={"b"} fontSize={"3xl"}>Our Services</Text>
-                <Grid templateColumns='repeat(3, 1fr)' gap={6}>
+                <Grid templateColumns={{base:'repeat(1,1fr)',sm:'repeat(2,1fr)',md:'repeat(3, 1fr)'}} gap={6}>
                     <GridItem p={"2%"} borderRadius={"5px"} border={"3px solid #4787f3"} className='education' w='100%' h='100%' bg='white' color={"#4787f3"}>
                         <Text as={"b"} fontSize={"2xl"}>Visa</Text>
                         <Text fontSize={"l"}>A visa is issued for the purpose of obtaining secondary, higher or vocational education abroad.Also, on a student visa, you can take language courses or advanced courses qualification</Text>
@@ -228,22 +231,22 @@ export default function Container() {
                     </GridItem>
 
                 </Grid>
-                <Box w={"90%"} m={"auto"} mt={"5%"}>
+                <Box w={"90%"} m={"auto"} mt={"5%"} h={"100%"}>
 
                     <Text className='colorprop' fontSize={"3xl"} as={"b"} >Feedback from our Students</Text>
-                    <Flex justifyContent={"space-evenly"} w={"100%"} m={"auto"} mt={"3%"} >
+                    <Flex justifyContent={"space-evenly"} w={"100%"} m={"auto"} mt={"3%"} direction={{base:"column",md:"row"}} gap={"6%"}>
                         <YouTube videoId="0PwNW7PAUzQ" opts={opts} />
                         <YouTube videoId="d8R-cfipBvg" opts={opts} />
                         <YouTube videoId="p1bsCYFTh0g" opts={opts} />
                     </Flex>
                 </Box>
             </Box>
-            
-            <Flex justifyContent={"center"} alignItems={"center"} w={"100%"} m={"auto"} mt={"5%"} backgroundColor={"#4787f3"} ><Text mt={"2%"} fontSize={"3xl"} color={"white"}>Subscribe so you don't miss out on great deals</Text></Flex>
+
+            <Flex justifyContent={"center"} alignItems={"center"} w={"100%"} m={"auto"} mt={"5%"} backgroundColor={"#4787f3"} ><Text mt={"2%"} fontSize={{base:"xl",md:"3xl"}} color={"white"}>Subscribe so you don't miss out on great deals</Text></Flex>
             <Flex justifyContent={"center"} alignItems={"center"} w={"100%"} m={"auto"} backgroundColor={"#4787f3"} h={"200px"} >
-                <InputGroup w={"50%"}  m={"auto"}>
+                <InputGroup w={"50%"} m={"auto"}>
                     <InputRightElement pointerEvents='none'>
-                        <BellIcon boxSize={"6"}/>
+                        <BellIcon boxSize={"6"} />
                     </InputRightElement>
                     <Input h={"50"} backgroundColor={"white"} type='tel' placeholder='example@gmail.com' />
                 </InputGroup>

@@ -31,13 +31,36 @@ import {
 } from '@chakra-ui/icons';
 import { SignUp } from './SignUp';
 import { SignIn } from './SignIn';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
+  const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
+  const [navbarTop, setNavbarTop] = useState(0);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        setNavbarTop(0);
+      } else {
+        setNavbarTop(-90);
+      }
+      setPrevScrollpos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollpos]);
   return (
     <Box>
       <Flex
+      id="navbar" style={{ top: `${navbarTop}px` }}
+      transition={"top 0.3s"}
+        zIndex={"5"}
         width={"100%"}
         position={"fixed"}
         top={"0"}
@@ -47,8 +70,8 @@ export default function Navbar() {
         py={{ base: 2 }}
         px={{ base: 4 }}
         // background={"transparent"}
-        borderBottom={1}
-        borderStyle={'solid'}
+        // borderBottom={1}
+        // borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
         align={'center'}>
         <Flex
@@ -337,10 +360,6 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Language Classes',
-    href: '#',
-  },
-  {
-    label: 'Services',
     href: '#',
   },
   {

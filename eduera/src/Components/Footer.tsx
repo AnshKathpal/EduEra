@@ -52,15 +52,14 @@ export default function Footer() {
             <Box>
              <Image  h={"65%"} src={logo}/>
             </Box>
-            
+            <Text>Service No. 1 for selection educational programs abroad</Text>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Product</ListHeader>
-            <Link href={'#'}>Overview</Link>
-            <Link href={'#'}>Features</Link>
-            <Link href={'#'}>Tutorials</Link>
-            <Link href={'#'}>Pricing</Link>
-            <Link href={'#'}>Releases</Link>
+            <Link href={'#'}>Education</Link>
+            <Link href={'#'}>Education </Link>
+            <Link href={'#'}>Language</Link>
+            <Link href={'#'}>Services</Link>
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Company</ListHeader>
