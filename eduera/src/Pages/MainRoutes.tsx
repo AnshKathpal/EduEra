@@ -21,6 +21,13 @@ export const MainRoutes = () => {
       <Route path="/programs/:id" element={<ProgramDetails/>}></Route>
       <Route path="/applied/:id" element={<Applied/>}></Route>
       <Route path="/applications" element={<MyApplications/>}></Route>
+
+      {/* <Route path="/adminuni" element={<AdminUserList/>}></Route> */}
+      {/* <Route path="/adminuni/:id" element={<AdminUser/>}></Route> */}
+      {/* <Route path="/adminuni/:id" element={<AdminUser/>}></Route> */}
+      {/* <Route path="/newUser" element={<AdminNewUser/>}></Route> */}
+      {/* <Route path="/AdminAnalytics" element={<AdminAnalitytics/>}></Route> */}
+      {/* <Route path="/adminDetails" element={<AdminDetails/>}></Route> */}
     </Routes>
   );
 };
