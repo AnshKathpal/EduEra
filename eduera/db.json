@@ -629,6 +629,7 @@
       "duration": "2 years",
       "fees": "19,018 GBPP",
       "startMonth": "September, January, May"
+
     }
   ],
   "login": [
@@ -636,14 +637,32 @@
       "id": 1,
       "username": "ansh",
       "email": "anshkathpal17@gmail.com",
-      "password": "ansh",
-      "token": "hdcsuj"
-    },
-    {
-      "email": "anshkathpal17@gmail.com",
-      "password": "ansh",
-      "id": 2
+
     }
   ],
-  "admin": []
+  "admin": [],
+  "applied": [
+    {
+      "applicant_name": "vhchdjcdsc",
+      "dob": "2023-06-14",
+      "gender": "cjskc s",
+      "nationality": "kncjncdsc",
+      "address": "sdlkncsdclsdkcklsd sdm",
+      "country": "cskdjncsd",
+      "education": "cskjcs ",
+      "program": "",
+      "id": 1
+    },
+    {
+      "applicant_name": "vhchdjcdsc",
+      "dob": "2023-06-14",
+      "gender": "cjskc s",
+      "nationality": "kncjncdsc",
+      "address": "kcsd kcms c",
+      "country": "cskdjncsd",
+      "education": "cskjcs ",
+      "program": "",
+      "id": 2
+    }
+  ]
 }
