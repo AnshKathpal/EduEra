@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Button, ButtonGroup, HStack, Card, CardBody, CardFooter, Container, Divider, Heading, Image, Stack, Text, Flex } from '@chakra-ui/react'
 import { University } from '../Constraints/types';
+import {Link} from "react-router-dom"
 
 
 export const UniversityCard = ({id,year_of_establishment,name,country,faculty,students,courses,images,flag,ownership,rating,place,category,brochure}: University) => {
@@ -59,8 +60,16 @@ export const UniversityCard = ({id,year_of_establishment,name,country,faculty,st
       </Flex>
     </Stack>
 <Stack mt={3} spacing={5} >
+  <Link to={`/applied/${id}`} >
   <Button bg={"rgb(242,104,34)"} color = "white" variant="solid" >Start Application</Button>
+  </Link>
+  
+  
+  <Link to="/programs" >
   <Button color="#4887f2" border= "2px solid #4887f2"  variant="outline" >Find your Program Matches</Button>
+  </Link>
+  
+
   </Stack>
 
   </div>

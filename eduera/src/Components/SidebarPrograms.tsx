@@ -26,11 +26,25 @@ export const SidebarPrograms = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialCountryValues = searchParams.getAll("country");
   const initialPlaceValues = searchParams.getAll("programName");
+  let initialOrderValues = searchParams.get("order");
+
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
+  const handleSearchQueryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.target.value);
+  };
+
+
   const [countryValues, setCountryValues] = useState<string[]>(
     initialCountryValues || []
   );
   const [programValues, setProgramValues] = useState<string[]>(
     initialPlaceValues || []
+  );
+
+  const [order, setOrder] = useState<string>(
+    initialOrderValues || ""
+    
   );
 
   const handleCountryValues = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -49,6 +63,7 @@ export const SidebarPrograms = () => {
     setProgramValues(selectedValues);
   };
 
+
   useEffect(() => {
     let params: { country?: string[] } = {};
     if (countryValues.length) params.country = countryValues;
@@ -65,19 +80,20 @@ export const SidebarPrograms = () => {
 
     <>
 
-<Box p={5} border="1px solid red" width="80%" margin="2% auto">
+<Box p={5}  boxShadow=" rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" backgroundColor="white" width="80%" margin="2% auto">
      
 <Flex justifyContent="space-between" >
 <Button onClick={onOpen}>Filter</Button>
 
 <Modal onClose={onClose} isOpen={isOpen} isCentered>
   <ModalOverlay />
-  <ModalContent>
+  <ModalContent maxW="500px" border="1px solid blue" >
     <ModalHeader>Filters</ModalHeader>
     <ModalCloseButton />
-    <ModalBody>
+    <ModalBody >
 
-    <select value={countryValues} onChange={handleCountryValues}>
+<Flex border="1px solid red" >
+<select value={countryValues} onChange={handleCountryValues}>
         <option value="">Select Country</option>
         <option value="England">England</option>
         <option value="UK">UK</option>
@@ -100,6 +116,9 @@ export const SidebarPrograms = () => {
       </select>
       
 
+</Flex>
+
+  
 
     </ModalBody>
     <ModalFooter>
@@ -108,13 +127,15 @@ export const SidebarPrograms = () => {
   </ModalContent>
 </Modal>
 
-<input placeholder="Search Universities" />
+<input style ={{border : "1px solid gray" , width : "30%", textAlign : "center"} } placeholder="Search Programs" value={searchQuery}
+  onChange={handleSearchQueryChange} />
     
 
-<Button>
-  Sort
-</Button>
-
+<select>
+        <option value="">Sort By</option>
+        <option value="name">Name</option>
+        <option value="fees">Fees</option>
+      </select>
     
 
 </Flex>

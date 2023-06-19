@@ -2,11 +2,12 @@ import axios, { AxiosResponse } from "axios";
 import { University, newUniversity, Programs } from "../../Constraints/types";
 import { GET_PROGRAM_SUCCESS, POST_PROGRAM_SUCCESS , PROGRAM_ERROR, PROGRAM_REQUEST, EDIT_PROGRAM, DELETE_PROGRAM } from "./actionTypes";
 import { Dispatch } from "redux";
+import { NewDataType } from "../../Pages/Applied";
 
 
 
 
-let url = "http://localhost:8080"
+let url = "https://json-server-b26.onrender.com"
 
 // export const getUniversities = async() => async (dispatch : any) => {
 // dispatch({type : "UNIVERSITY_REQUEST"})
@@ -42,6 +43,35 @@ let url = "http://localhost:8080"
         }
         }
 
+        export const addApplication = (newData:NewDataType) => {
+            axios.post(`https://json-server-b26.onrender.com/applied`,newData).then((res)=>{
+             return(res.data)
+            }).catch((err)=>{
+             console.log(err)
+            })
+         };
+
+         export const getApplications = async () => {
+            const response = await axios
+              .get(`https://json-server-b26.onrender.com/applied`)
+              .then((res) =>
+              res.data)
+              .catch((err) => {
+                console.log(err);
+                return null;
+              });
+          
+            return response;
+          };
+
+          export const deleteProduct = async (id: number) => {
+            try {
+              const response = await axios.delete(`https://json-server-b26.onrender.com/applied/${id}`);
+              return response.data;
+            } catch (error) {
+              throw new Error(`Failed to delete product: ${error}`);
+            }
+          };
 
 
 

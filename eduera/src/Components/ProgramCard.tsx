@@ -86,6 +86,7 @@ export const ProgramCard = (
           width="30%"
           borderLeft="2px solid rgb(244,245,247)"
         >
+          <Link to={`/applied/${id}`}>
           <Button
             margin="auto"
             width="70%"
@@ -95,6 +96,7 @@ export const ProgramCard = (
           >
             Start Application
           </Button>
+          </Link>
           <Link to={`/programs/${id}`}>
             <Button
               margin="auto"
