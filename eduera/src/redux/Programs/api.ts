@@ -7,7 +7,7 @@ import { NewDataType } from "../../Pages/Applied";
 
 
 
-let url = "http://localhost:8080"
+let url = "https://json-server-b26.onrender.com"
 
 // export const getUniversities = async() => async (dispatch : any) => {
 // dispatch({type : "UNIVERSITY_REQUEST"})
@@ -44,7 +44,7 @@ let url = "http://localhost:8080"
         }
 
         export const addApplication = (newData:NewDataType) => {
-            axios.post(`http://localhost:8080/applied`,newData).then((res)=>{
+            axios.post(`https://json-server-b26.onrender.com/applied`,newData).then((res)=>{
              return(res.data)
             }).catch((err)=>{
              console.log(err)
@@ -53,7 +53,7 @@ let url = "http://localhost:8080"
 
          export const getApplications = async () => {
             const response = await axios
-              .get(`http://localhost:8080/applied`)
+              .get(`https://json-server-b26.onrender.com/applied`)
               .then((res) =>
               res.data)
               .catch((err) => {
@@ -66,7 +66,7 @@ let url = "http://localhost:8080"
 
           export const deleteProduct = async (id: number) => {
             try {
-              const response = await axios.delete(`http://localhost:8080/applied/${id}`);
+              const response = await axios.delete(`https://json-server-b26.onrender.com/applied/${id}`);
               return response.data;
             } catch (error) {
               throw new Error(`Failed to delete product: ${error}`);

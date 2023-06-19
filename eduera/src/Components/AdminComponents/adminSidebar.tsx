@@ -2,13 +2,14 @@ import React from 'react'
 // import { LineStyle, Timeline, TrendingUp, PermIdentity, Storefront, LocalAtm, Assessment, Drafts, Feedback, Forum, Work, Receipt, PieChart } from "@material-ui/icons";
 import styled, { css } from "styled-components";
 import { Link } from 'react-router-dom';
+import ImgLogo from "../../Images/logo.png"
 
 const AdminSidebar = () => {
     return (
         <SidebarContainer>
             <SidebarWrapper>
                 <Logo>
-                <LogoImage src="/useEduEra.png" alt="Logo" />
+                <LogoImage src={ImgLogo} alt="Logo" />
                 </Logo>
                 
                 <SidebarMenu>

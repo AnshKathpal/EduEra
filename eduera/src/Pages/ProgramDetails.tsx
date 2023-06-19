@@ -67,6 +67,7 @@ export const ProgramDetails = () => {
           alignItems="center"
           bg="url(https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1600)"
           id="parallax-background"
+          backgroundSize="cover"
           pos="absolute"
           top="0"
           left="0"
@@ -224,7 +225,7 @@ export const ProgramDetails = () => {
         </Link>
       </Box>
 
-      <Flex justifyContent="space-between" width="80%" margin="auto" border="1px solid red" >
+      {/* <Flex justifyContent="space-between" width="80%" margin="auto" border="1px solid red" >
         <Box>
         <Text>Program Overview</Text>
         {selectedProgram && (
@@ -237,7 +238,7 @@ export const ProgramDetails = () => {
 
         </Box>
         
-      </Flex>
+      </Flex> */}
 
       <Flex gap={30} width="80%" margin="3% auto" height="400px">
         <Box width="80%">
