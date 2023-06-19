@@ -5,6 +5,7 @@ import { useAppSelector } from "../redux/store";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
 import { addApplication } from "../redux/Programs/api";
+import AppliedImg from "../Images/Applied.png"
 
 import {
   Progress,
@@ -85,39 +86,74 @@ export const Applied = () => {
     setNewData({ ...newData, [name]: value });
   };
 
+  const handleChangeSelect = (e : React.ChangeEvent<HTMLSelectElement>) => {
+
+    const { value, name } = e.target;
+    setNewData({ ...newData, [name]: value });
+  };
+
   const handleSubmit = (e : React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     addApplication(newData);
+    setNewData(initialState)
   }
+
+  // useEffect(() => {
+  //   const parallax = () => {
+  //     const scrolled = window.pageYOffset;
+  //     const background = document.getElementById("parallax-background");
+  //     if (background) {
+  //       background.style.transform = `translate3d(0, ${scrolled * 0.4}px, 0)`;
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", parallax);
+  //   return () => {
+  //     window.removeEventListener("scroll", parallax);
+  //   };
+  // }, []);
 
   return (
     <>
     <Navbar />
+    {/* <Box pos="relative" overflow="hidden" width="100%" height="90vh"> */}
       <Flex
-        border="1px solid red"
+      flexDirection="column"
         width="100%"
         height="90vh"
         justifyContent="center"
+        gap={20}
         alignItems="center"
-        backgroundImage="linear-gradient(to bottom, #898a88, #a4a6a5, #c1c3c3, #e0e1e1, #ffffff)"
+        backgroundImage={AppliedImg}
+        backgroundSize="cover"
+        // id="parallax-background"
+        // pos="absolute"
+        // top="0"
+        // left="0"
+        // w="100%"
+        // h="100%"
+        // style={{ willChange: "transform" }}
       >
         {selectedProgram && (
           <>
-          <Text>Great - we'll help you apply for your chosen program</Text>
-          <Box>
-          <Text>{selectedProgram.programName}</Text>
+          <Box bg="white" width="70%" opacity={0.8} >
+          <Text position="relative" color="rgb(18,57,78)" fontSize="5xl" >Great - we'll help you apply for your chosen program</Text>
+          </Box> 
+          <Box bg="white" width="40%" opacity={0.8} >
+          <Text color="rgb(18,57,78)" fontSize="3xl" >{selectedProgram.programName} <br /> {selectedProgram.university}</Text>
           </Box>
           </>
         )}
       </Flex>
+      {/* </Box> */}
       <Box>
-        <Text fontSize="4xl" >Fill the Application form</Text>
+        <Text fontSize="4xl" mt={4} >Fill the Application form</Text>
       </Box>
       <form style={{width : "70%", margin : " 5% auto"}} onSubmit={handleSubmit} >
         <FormControl isRequired >
           <FormLabel>1. Applicant's Name</FormLabel>
           <Input
-            type="string"
+            type="text"
             name="applicant_name"
             value={newData.applicant_name}
             onChange={handleChange}
@@ -125,21 +161,26 @@ export const Applied = () => {
           <FormLabel>2. Date of Birth</FormLabel>
           <Input type="date" name="dob" value={newData.dob} onChange = {handleChange} ></Input>
           <FormLabel>3. Gender</FormLabel>
-          <Input type="string" name="gender" value={newData.gender} onChange = {handleChange} ></Input>
+          {/* <Input type="select" name="gender" value={newData.gender} onChange = {handleChange} ></Input> */}
+          <select style={{width : "100%", height : "40px", border : "1px solid rgb(203,214,224)", borderRadius:"5px"}} name="gender" onChange={handleChangeSelect} >
+          <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
           <FormLabel>4. Nationality</FormLabel>
           <Input
-            type="string"
+            type="text"
             name="nationality"
             value={newData.nationality}
             onChange={handleChange}
           ></Input>
           <FormLabel>5. Permanent Address</FormLabel>
-          <Input type="string" name="address" value={newData.address} onChange = {handleChange} ></Input>
+          <Input type="text" name="address" value={newData.address} onChange = {handleChange} ></Input>
           <FormLabel>6. Country</FormLabel>
           <Input type="string" name="country" value={newData.country} onChange = {handleChange}></Input>
           <FormLabel>7. Current/Most Recent Educational Institution:</FormLabel>
           <Input
-            type="string"
+            type="text"
             name="education"
             value={newData.education}
             onChange = {handleChange}
@@ -147,14 +188,23 @@ export const Applied = () => {
           <FormLabel>8. Program of Interest</FormLabel>
           {selectedProgram && (
             <Input
-            type="string"
+            type="text"
             name="program"
             value={selectedProgram.programName}
             onChange = {handleChange}
           ></Input>
           )}
+          <FormLabel>9. University Applied</FormLabel>
+          {selectedProgram && (
+            <Input
+            type="text"
+            name="program"
+            value={selectedProgram.university}
+            onChange = {handleChange}
+          ></Input>
+          )}
           
-          <Button type="submit" >Submit</Button>
+          <Button mt={5} type="submit" >Submit Application</Button>
         </FormControl>
       </form>
       <Footer />

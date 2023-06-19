@@ -53,7 +53,7 @@ import {
   EDIT_PRODUCT_SUCCESS,
 } from './actionTypes';
 
-const baseURL = 'http://localhost:8080/universities';
+const baseURL = 'https://json-server-b26.onrender.com/universities';
 
 export const getProduct = (dispatch: Dispatch<AnyAction>) => {
   dispatch({ type: PRODUCT_REQUEST });
@@ -97,7 +97,7 @@ export const addProduct = (data: any) => (dispatch: Dispatch<AnyAction>) => {
   dispatch({ type: PRODUCT_REQUEST });
 
   axios
-    .post(`http://localhost:8080/universities`, data)
+    .post(`https://json-server-b26.onrender.com/universities`, data)
     .then((res) => {
       dispatch({ type: ADD_PRODUCT_SUCCESS, payload: res.data });
     })

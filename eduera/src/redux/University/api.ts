@@ -6,7 +6,7 @@ import { Dispatch } from "redux";
 
 
 
-let url = "http://localhost:8080"
+let url = "https://json-server-b26.onrender.com"
 
 // export const getUniversities = async() => async (dispatch : any) => {
 // dispatch({type : "UNIVERSITY_REQUEST"})

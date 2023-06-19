@@ -5,6 +5,7 @@ import { useAppSelector } from "../redux/store";
 import Footer from "../Components/Footer";
 import { Link } from "react-router-dom";
 import { addApplication, getApplications,deleteProduct } from "../redux/Programs/api";
+import ApplicationImg from "../Images/applications.png"
 
 import {
   Container,
@@ -101,21 +102,52 @@ export const MyApplications = () => {
 
   return (
 
-    <TableContainer>
+    <>
+    
+    <Navbar />
+
+    <Flex
+      flexDirection="column"
+        width="100%"
+        height="90vh"
+        justifyContent="center"
+        gap={20}
+        alignItems="center"
+        backgroundImage={ApplicationImg}
+        backgroundSize="cover"
+        // id="parallax-background"
+        // pos="absolute"
+        // top="0"
+        // left="0"
+        // w="100%"
+        // h="100%"
+        // style={{ willChange: "transform" }}
+      >
+       <Box bg="white" width="70%" opacity={0.8} >
+          <Text position="relative" color="rgb(18,57,78)" fontSize="5xl" >Route to the Bright Future</Text>
+          </Box>
+          <Box bg="white" width="40%" opacity={0.8} >
+          <Text color="rgb(18,57,78)" fontSize="3xl" >Your Applications</Text>
+          </Box>
+      </Flex>
+
+
+
+    <TableContainer width = "80%" margin="10% auto" >
   <Table variant='simple'>
     <Thead>
-      <Tr>
-        <Th>Application ID</Th>
-        <Th>Applicant Name</Th>
-        <Th>Gender</Th>
-        <Th>Address</Th>
-        <Th>Country</Th>
-        <Th>Applied For</Th>
+      <Tr borderBottom="2px solid black" >
+        <Th fontSize="l" >Application ID</Th>
+        <Th fontSize="l">Applicant Name</Th>
+        <Th fontSize="l">Gender</Th>
+        <Th fontSize="l">Address</Th>
+        <Th fontSize="l">Country</Th>
+        <Th fontSize="l">Applied For</Th>
       </Tr>
-    </Thead>
+    </Thead >
 
 {allProducts && allProducts.map((apps)=>(
-    <Tbody>
+    <Tbody >
       <Tr>
         <Td>#{Math.floor(Math.random() * 10000) + 1}</Td>
         <Td>{apps.applicant_name}</Td>
@@ -123,11 +155,14 @@ export const MyApplications = () => {
         <Td>{apps.address}</Td>
         <Td>{apps.country}</Td>
         <Td>{apps.program}</Td>
-        <Button onClick={()=>handelDelete(apps.id!)} >Cancel Application</Button>
+        <Button mt={3} onClick={()=>handelDelete(apps.id!)} >Cancel Application</Button>
       </Tr>
     </Tbody>
 ))}
   </Table>
 </TableContainer>
+
+<Footer />
+</>
   )
 }

@@ -561,24 +561,6 @@
       "place": "London",
       "category": "university",
       "brochure": 100
-    },
-    {
-      "id": 31,
-      "year_of_establishment": 1978,
-      "name": "State Polytechnic",
-      "country": "England",
-      "faculty": 150,
-      "students": 12000,
-      "courses": 90,
-      "images": [
-        "https://tse3.mm.bing.net/th?id=OIP.v__pW21IxvMAZxeTbO5NiAHaEb&pid=Api&P=0"
-      ],
-      "flag": "https://t4.ftcdn.net/jpg/01/71/57/89/360_F_171578974_eNhE6sEpc6jsK6Py7IxhTbIZZQ7878Wb.jpg",
-      "ownership": "private",
-      "rating": 4.6,
-      "place": "London",
-      "category": "university",
-      "brochure": 100
     }
   ],
   "programs": [
@@ -643,26 +625,48 @@
   "admin": [],
   "applied": [
     {
-      "applicant_name": "vhchdjcdsc",
+      "applicant_name": "Ansh Kathpal",
       "dob": "2023-06-14",
-      "gender": "cjskc s",
-      "nationality": "kncjncdsc",
-      "address": "sdlkncsdclsdkcklsd sdm",
-      "country": "cskdjncsd",
-      "education": "cskjcs ",
-      "program": "",
-      "id": 1
+      "gender": "male",
+      "nationality": "Indian",
+      "address": "Rohini",
+      "country": "India",
+      "education": "GB-Pant Inst",
+      "program": "New York Film Academyy",
+      "id": 3
     },
     {
-      "applicant_name": "vhchdjcdsc",
-      "dob": "2023-06-14",
-      "gender": "cjskc s",
-      "nationality": "kncjncdsc",
-      "address": "kcsd kcms c",
-      "country": "cskdjncsd",
-      "education": "cskjcs ",
-      "program": "",
-      "id": 2
+      "applicant_name": "Shivansh Soni",
+      "dob": "2014-06-24",
+      "gender": "Male",
+      "nationality": "Indian",
+      "address": "Jhansi",
+      "country": "India",
+      "education": "MDU",
+      "program": "Accountancy and Business Administration N",
+      "id": 4
+    },
+    {
+      "applicant_name": "Nikhil",
+      "dob": "2023-06-12",
+      "gender": "Male",
+      "nationality": "Indian",
+      "address": "Maharashtra",
+      "country": "India",
+      "education": "IIM",
+      "program": "New York Film Academ",
+      "id": 5
+    },
+    {
+      "applicant_name": "Payal",
+      "dob": "2023-05-30",
+      "gender": "Female",
+      "nationality": "Indian",
+      "address": "Raipur",
+      "country": "India",
+      "education": "RAI",
+      "program": "New York Film Academyy",
+      "id": 6
     }
   ]
 }
