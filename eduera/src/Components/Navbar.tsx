@@ -1,5 +1,7 @@
 import React from 'react'
 import logo from "../Images/logo.png"
+
+import {  To, NavLink } from 'react-router-dom';
 // export const  = () => {
 //   return (
 //     <div>Navbar</div>
@@ -15,7 +17,7 @@ import {
   Stack,
   Collapse,
   Icon,
-  Link,
+Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -29,7 +31,7 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons';
-import { SignUp } from './SignUp';
+import {SignUp} from './SignUp';
 import { SignIn } from './SignIn';
 import { useState, useEffect } from 'react';
 
@@ -58,8 +60,8 @@ export default function Navbar() {
   return (
     <Box>
       <Flex
-      id="navbar" style={{ top: `${navbarTop}px` }}
-      transition={"top 0.3s"}
+        id="navbar" style={{ top: `${navbarTop}px` }}
+        transition={"top 0.3s"}
         zIndex={"5"}
         width={"100%"}
         position={"fixed"}
@@ -88,6 +90,7 @@ export default function Navbar() {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'center' }}>
+          <NavLink to={"/"} >
           <Text
             textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
@@ -99,11 +102,12 @@ export default function Navbar() {
               alt='Shivansh soni'
               overflow="hidden"
               
-            />
+              />
           </Text>
+              </NavLink>
 
           <Flex alignItems={"center"} justifyContent={"center"} display={{ base: 'none', md: 'flex' }} ml={10} width={"80%"} >
-            <DesktopNav/>
+            <DesktopNav />
           </Flex>
         </Flex>
 
@@ -112,13 +116,14 @@ export default function Navbar() {
           justify={'center'}
           direction={'row'}
           spacing={6}>
-         <SignIn/>
-        <SignUp/>
+          <SignIn />
+          <SignUp />
         </Stack>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
+
       </Collapse>
     </Box>
   );
@@ -129,29 +134,31 @@ const DesktopNav = () => {
   const linkHoverColor = useColorModeValue('gray.800', 'white');
   const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
+
   return (
     <Stack direction={'row'} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger>
-              <Link
-              ml={"20px"}
-              mr={"20px"}
-                p={2}
-                href={navItem.href ?? '#'}
-                fontSize={'l'}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: 'none',
-                  color: linkHoverColor,
-                }}>
-                {navItem.label}
-              </Link>
+            <NavLink
+  to={navItem.href ?? '/'}
+  style={{
+    marginLeft: '20px',
+    marginRight: '20px',
+    padding: '2rem',
+    fontSize: 'large',
+    fontWeight: 500,
+    color: linkColor,
+    textDecoration: 'none',
+  }}
+>
+  {navItem.label}
+</NavLink>
+              {/* <Link to={navItem.href ?? '/'}>{navItem.label}</Link> */}
             </PopoverTrigger>
 
-            {navItem.children && (
+            {/* {navItem.children && (
               <PopoverContent
                 border={0}
                 boxShadow={'xl'}
@@ -165,7 +172,7 @@ const DesktopNav = () => {
                   ))}
                 </Stack>
               </PopoverContent>
-            )}
+            )} */}
           </Popover>
         </Box>
       ))}
@@ -176,12 +183,13 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
   return (
     <Link
-      href={href}
+      // href={href}
       role={'group'}
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
+      >
       <Stack direction={'row'} align={'center'}>
         <Box>
           <Text
@@ -228,7 +236,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
       <Flex
         py={2}
         as={Link}
-        href={href ?? '#'}
+        // href={href ?? '#'}
         justify={'space-between'}
         align={'center'}
         _hover={{
@@ -260,7 +268,9 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           align={'start'}>
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
+              <Link key={child.label} py={2}
+              //  href={child.href}
+               >
                 {child.label}
               </Link>
             ))}
@@ -274,96 +284,99 @@ interface NavItem {
   label: string;
   subLabel?: string;
   children?: Array<NavItem>;
-  href?: string;
+  href?: To;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Country',
-    children: [
-      {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
-        href: '#',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
-      },
-    ],
+    label: 'Programs',
+    href: "/programs",
+    // children: [
+    //   {
+    //     label: 'Explore Design Work',
+    //     subLabel: 'Trending Design to inspire you',
+    //     href: '#',
+    //   },
+    //   {
+    //     label: 'New & Noteworthy',
+    //     subLabel: 'Up-and-coming Designers',
+    //     href: '#',
+    //   },
+    //   {
+    //     label: 'New & Noteworthy',
+    //     subLabel: 'Up-and-coming Designers',
+    //     href: '#',
+    //   },
+    //   {
+    //     label: 'New & Noteworthy',
+    //     subLabel: 'Up-and-coming Designers',
+    //     href: '#',
+    //   },
+    //   {
+    //     label: 'New & Noteworthy',
+    //     subLabel: 'Up-and-coming Designers',
+    //     href: '#',
+    //   },
+    //   {
+    //     label: 'New & Noteworthy',
+    //     subLabel: 'Up-and-coming Designers',
+    //     href: '#',
+    //   },
+    //   {
+    //     label: 'New & Noteworthy',
+    //     subLabel: 'Up-and-coming Designers',
+    //     href: '#',
+    //   },
+    // ],
   },
   {
-    label: 'Education',
-    children: [
-      {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-    ],
+    label: 'Universities',
+    href: "/universities",
+    //   children: [
+    //     {
+    //       label: 'Job Board',
+    //       subLabel: 'Find your dream design job',
+    //       href: '#',
+    //     },
+    //     {
+    //       label: 'Freelance Projects',
+    //       subLabel: 'An exclusive list for contract work',
+    //       href: '#',
+    //     },
+    //     {
+    //       label: 'Freelance Projects',
+    //       subLabel: 'An exclusive list for contract work',
+    //       href: '#',
+    //     },
+    //     {
+    //       label: 'Freelance Projects',
+    //       subLabel: 'An exclusive list for contract work',
+    //       href: '#',
+    //     },
+    //     {
+    //       label: 'Freelance Projects',
+    //       subLabel: 'An exclusive list for contract work',
+    //       href: '#',
+    //     },
+    //     {
+    //       label: 'Freelance Projects',
+    //       subLabel: 'An exclusive list for contract work',
+    //       href: '#',
+    //     },
+    //     {
+    //       label: 'Freelance Projects',
+    //       subLabel: 'An exclusive list for contract work',
+    //       href: '#',
+    //     },
+    //   ],
   },
+
   {
     label: 'Language Classes',
     href: '#',
   },
   {
-    label: 'About Us',
-    href: '#',
+    label: 'Guides',
+    href: './',
   },
 ];

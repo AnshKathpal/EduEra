@@ -629,54 +629,7 @@
       "duration": "2 years",
       "fees": "19,018 GBPP",
       "startMonth": "September, January, May"
-    },
-    {
-      "id": 5,
-      "image": "https://images.studee.com/images/university/university__academy-of-information-technology--logo.png?ixlib=js-2.3.2&auto=format&fit=crop&q=35&w=85&h=85",
-      "programName": "2D Animation (Melbourne Campus)",
-      "degree": "BAnim",
-      "university": "AIT Academy of Interactive Technology",
-      "country": "Australia",
-      "programType": "Bachelor's",
-      "duration": "3 years",
-      "fees": "8,527 GBP",
-      "startMonth": "February, May, September"
-    },
-    {
-      "id": 6,
-      "image": "https://images.studee.com/images/university/university__new-york-film-academy--logo.png?ixlib=js-2.3.2&auto=format&fit=crop&q=35&w=85&h=85",
-      "programName": "3D Animation and VFX",
-      "degree": "BFA",
-      "university": "New York Film Academy",
-      "country": "USA",
-      "programType": "Bachelor's",
-      "duration": "3 years",
-      "fees": "21,858 GBP",
-      "startMonth": "August, January, May"
-    },
-    {
-      "id": 7,
-      "image": "https://images.studee.com/images/university/university__university-of-north-carolina-wilmington--logo.svg?ixlib=js-2.3.2&auto=format&fit=crop&q=35&w=85&h=85",
-      "programName": "Accelerated Plus (Digital)",
-      "degree": "PGP",
-      "university": "AIT Academy of Interactive Technology",
-      "country": "Postgraduate pathway",
-      "programType": "Bachelor's",
-      "duration": "6 months",
-      "fees": "8,527 GBP",
-      "startMonth": "September"
-    },
-    {
-      "id": 8,
-      "image": "https://images.studee.com/images/university/university__southern-utah-university--logo.svg?ixlib=js-2.3.2&auto=format&fit=crop&q=35&w=85&h=85",
-      "programName": "Accountancy and Business Administration ",
-      "degree": "Dual MAcc/MBA",
-      "university": "Southern Utah University",
-      "country": "USA",
-      "programType": "Master's",
-      "duration": "2 years",
-      "fees": "19,018 GBPP",
-      "startMonth": "September, January, May"
+
     }
   ],
   "login": [
@@ -684,7 +637,7 @@
       "id": 1,
       "username": "ansh",
       "email": "anshkathpal17@gmail.com",
-      "password": "ansh"
+
     }
   ],
   "admin": [],
