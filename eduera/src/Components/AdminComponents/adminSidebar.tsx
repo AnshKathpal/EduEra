@@ -8,9 +8,12 @@ const AdminSidebar = () => {
     return (
         <SidebarContainer>
             <SidebarWrapper>
+                <Link to={"/"} >
                 <Logo>
                 <LogoImage src={ImgLogo} alt="Logo" />
                 </Logo>
+                </Link>
+                
                 
                 <SidebarMenu>
                     <SidebarTitle>Dashboard</SidebarTitle>
