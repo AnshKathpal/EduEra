@@ -34,6 +34,7 @@ import {
 import {SignUp} from './SignUp';
 import { SignIn } from './SignIn';
 import { useState, useEffect } from 'react';
+// import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
@@ -116,6 +117,11 @@ export default function Navbar() {
           justify={'center'}
           direction={'row'}
           spacing={6}>
+            <Flex alignItems={"center"}>
+              <NavLink to={"/applications"}>
+            <Text  color={"white"} as={"b"}>{"MyApplication"}</Text>
+              </NavLink>
+            </Flex>
           <SignIn />
           <SignUp />
         </Stack>
