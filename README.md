@@ -96,4 +96,12 @@ He is responsible for making the admin pagewhere the admin page have the full co
 
 # Admin Page
 
+<img width="1680" alt="Screenshot 2023-06-19 at 2 28 39 PM" src="https://github.com/AnshKathpal/flowing-basketball-1538/assets/115460552/6074c709-d7d2-470f-8851-59d76a690fdd">
 
+<img width="1680" alt="Screenshot 2023-06-19 at 2 28 43 PM" src="https://github.com/AnshKathpal/flowing-basketball-1538/assets/115460552/c8f94f2f-1100-4790-83dd-9c8f26fcea5d">
+
+
+<img width="1680" alt="Screenshot 2023-06-19 at 2 28 46 PM" src="https://github.com/AnshKathpal/flowing-basketball-1538/assets/115460552/d27a65c4-e854-4387-84e3-bd68008365c7">
+
+<img width="1680" alt="Screenshot 2023-06-19 at 2 28 50 PM" src="https://github.com/AnshKathpal/flowing-basketball-1538/assets/115460552/b4ea1b50-e640-4f72-ab5e-9d4436944b7d">
+<img width="1680" alt="Screenshot 2023-06-19 at 2 28 53 PM" src="https://github.com/AnshKathpal/flowing-basketball-1538/assets/115460552/13e5bc22-0a36-4127-9a7d-f0a9455bf940">
