@@ -26,7 +26,7 @@ import { Programs } from "../Constraints/types";
 import { ProgramCard } from "../Components/ProgramCard";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export const ProgramList = () => {
   const dispatch = useAppDispatch();
@@ -89,40 +89,48 @@ export const ProgramList = () => {
       (searchParams.has("programType")
         ? programsList.programType === searchParams.get("programType")
         : true) &&
-        (searchParams.has("search")
-      ? programsList.programName
-          .toLowerCase()
-          .includes(searchParams.get("search")?.toLowerCase() || "")
-      : true)
+      (searchParams.has("search")
+        ? programsList.programName
+            .toLowerCase()
+            .includes(searchParams.get("search")?.toLowerCase() || "")
+        : true)
   );
   return (
     <div style={{ backgroundColor: "rgb(244,245,247)" }}>
-      {/* <Navbar /> */}
-      <Box pos="relative"
-      overflow="hidden">
-      <Flex
-        bg="url(https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1600)"
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-        height= {{base : "40vh" , lg : "80vh"}}
-        id="parallax-background"
-        gap={5}
-      >
-        <Box bg="white" width={{base : "90%", lg  :"70%"}} opacity={0.8} >
-        <Text position="relative" color="rgb(18,57,78)" fontSize={{base : "xl" , lg : "7xl"}}>
-            Find & apply for your ideal program
+      <Box pos="relative" overflow="hidden">
+        <Flex
+          bg="url(https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1600)"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          height={{ base: "40vh", lg: "80vh" }}
+          id="parallax-background"
+          gap={5}
+        >
+          <Box bg="white" width={{ base: "90%", lg: "70%" }} opacity={0.8}>
+            <Text
+              position="relative"
+              color="rgb(18,57,78)"
+              fontSize={{ base: "xl", lg: "7xl" }}
+            >
+              Find & apply for your ideal program
+            </Text>
+          </Box>
+
+          <Text color="white" fontSize={{ base: "l", lg: "3xl" }}>
+            Get a free 48 hour fast-track assessment (worth $185*) to maximize
+            your chance of getting admitted
           </Text>
-        </Box>
-          
-        <Text   color="white" fontSize={{base : "l" , lg : "3xl"}} >
-          Get a free 48 hour fast-track assessment (worth $185*) to maximize
-          your chance of getting admitted
-        </Text>
-        <Button width="20%" bg="rgb(72,135,242)" mt={5}>How EduEra can Help</Button>
-      </Flex>
+          <Button
+            width={{ base: "50%", lg: "20%" }}
+            bg="rgb(72,135,242)"
+            mt={5}
+          >
+            How EduEra can Help
+          </Button>
+        </Flex>
       </Box>
-      
+
       {/* <Box> */}
       <SidebarPrograms />
 
@@ -132,7 +140,7 @@ export const ProgramList = () => {
             return <ProgramCard key={item.id} {...item} />;
           })}
       </Box>
-      
+
       <Box pb={5} width="80%" margin="auto">
         <Text fontWeight="bold" fontSize="5xl">
           Why use EduEra?
@@ -141,15 +149,15 @@ export const ProgramList = () => {
           We maximise your chance of being admitted with our free, 48 hour
           fast-track assessment (worth $185*)
         </Text>
-        <Flex justifyContent="space-around" alignItems="center">
-          <Box  p={4}>
+        <Flex direction={{base : "column", lg : "row"}} justifyContent="space-around"  alignItems="center">
+          <Box p={4}>
             <img
               style={{ margin: "auto" }}
               src="https://images.studee.com/illustrations/illustration__spot--program-matching.png?ixlib=js-2.3.2&auto=format&fit=crop&q=45&w=128"
               alt=""
             />
             <Text fontWeight="bold">Find your ideal program</Text>
-            <Text>
+            <Text display = {{base : "none", lg : "inline"}} >
               Filter 10,000s of programs down to a shortlist perfect for you,
               where you have a strong chance of getting admitted
             </Text>
@@ -160,8 +168,8 @@ export const ProgramList = () => {
               src="https://images.studee.com/illustrations/illustration__spot--save-details.png?ixlib=js-2.3.2&auto=format&fit=crop&q=45&w=128"
               alt=""
             />
-            <Text fontWeight="bold">Find your ideal program</Text>
-            <Text>
+            <Text fontWeight="bold" >Find your ideal program</Text>
+            <Text display = {{base : "none", lg : "inline"}}  >
               Filter 10,000s of programs down to a shortlist perfect for you,
               where you have a strong chance of getting admitted
             </Text>
@@ -173,7 +181,7 @@ export const ProgramList = () => {
               alt=""
             />
             <Text fontWeight="bold">Find your ideal program</Text>
-            <Text>
+            <Text display = {{base : "none", lg : "inline"}}  >
               Filter 10,000s of programs down to a shortlist perfect for you,
               where you have a strong chance of getting admitted
             </Text>
@@ -185,7 +193,7 @@ export const ProgramList = () => {
               alt=""
             />
             <Text fontWeight="bold">Find your ideal program</Text>
-            <Text>
+            <Text display = {{base : "none", lg : "inline"}}  >
               Filter 10,000s of programs down to a shortlist perfect for you,
               where you have a strong chance of getting admitted
             </Text>
