@@ -16,15 +16,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
-// import { University } from "../Constraints/types";
 import { useAppDispatch, useAppSelector } from "../redux/store";
-// import { getUniversities, postUniversities } from "../redux/University/api";
 import { AppAction } from "../redux/Programs/action";
-// import { GET_UNIVERSITY_SUCCESS } from "../redux/University/actionTypes";
 import { GET_PROGRAM_SUCCESS } from "../redux/Programs/actionTypes";
-// import { UniversityCard } from "../Components/UniversityCard";
-// import { newUniversity } from "../Constraints/types";
-// import { Sidebar } from "../Components/Sidebar";
 import { useLocation, useSearchParams } from "react-router-dom";
 import { SidebarPrograms } from "../Components/SidebarPrograms";
 import { getPrograms } from "../redux/Programs/api";
@@ -111,17 +105,17 @@ export const ProgramList = () => {
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        height="80vh"
+        height= {{base : "40vh" , lg : "80vh"}}
         id="parallax-background"
         gap={5}
       >
-        <Box bg="white" width="70%" opacity={0.8} >
-        <Text position="relative" color="rgb(18,57,78)" fontSize="7xl">
+        <Box bg="white" width={{base : "90%", lg  :"70%"}} opacity={0.8} >
+        <Text position="relative" color="rgb(18,57,78)" fontSize={{base : "xl" , lg : "7xl"}}>
             Find & apply for your ideal program
           </Text>
         </Box>
           
-        <Text color="white" fontSize="3xl" >
+        <Text   color="white" fontSize={{base : "l" , lg : "3xl"}} >
           Get a free 48 hour fast-track assessment (worth $185*) to maximize
           your chance of getting admitted
         </Text>
@@ -148,7 +142,7 @@ export const ProgramList = () => {
           fast-track assessment (worth $185*)
         </Text>
         <Flex justifyContent="space-around" alignItems="center">
-          <Box p={4}>
+          <Box  p={4}>
             <img
               style={{ margin: "auto" }}
               src="https://images.studee.com/illustrations/illustration__spot--program-matching.png?ixlib=js-2.3.2&auto=format&fit=crop&q=45&w=128"
