@@ -1,59 +1,53 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { connect, ConnectedProps } from 'react-redux';
+import { RootState } from '../../redux/store';
+import { login } from '../../redux/AdminReducer/action';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-interface PromptLoginProps {
-  onLogin: (username: string, password: string) => void;
-}
+const mapStateToProps = (state: RootState) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+});
 
-const PromptLogin: React.FC<PromptLoginProps> = ({ onLogin }) => {
-  const [open, setOpen] = useState(false);
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+const mapDispatchToProps = {
+  login
+};
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
 
-  const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setUsername(event.target.value);
-  };
+const connector = connect(mapStateToProps, mapDispatchToProps);
 
-  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(event.target.value);
-  };
+type PropsFromRedux = ConnectedProps<typeof connector>;
 
-  const handleSubmit = () => {
-    onLogin(username, password);
-    handleClose();
+type LoginProps = PropsFromRedux;
+
+const Login: React.FC<LoginProps> = ({ login }) => {
+
+  const location = useLocation()
+  const navigate = useNavigate();
+
+
+  const handleLogin = () => {
+
+
+      const username = prompt('Enter your username:');
+      const password = prompt('Enter your password:');
+  
+      if (username === 'admin' && password === 'admin') {
+        login(username, password);
+        navigate("/adminuni")
+      } else {
+        alert('Invalid username or password');
+        navigate("/")
+      }
+
+      
   };
 
   return (
     <div>
-      <button onClick={handleOpen}>Login</button>
-      {open && (
-        <div className="modal">
-          <div className="modal-content">
-            <h2>Login</h2>
-            <div>
-              <label>Username:</label>
-              <input type="text" value={username} onChange={handleUsernameChange} />
-            </div>
-            <div>
-              <label>Password:</label>
-              <input type="password" value={password} onChange={handlePasswordChange} />
-            </div>
-            <div>
-              <button onClick={handleSubmit}>Login</button>
-              <button onClick={handleClose}>Cancel</button>
-            </div>
-          </div>
-        </div>
-      )}
+      <button onClick={handleLogin}>Admin Login</button>
     </div>
   );
 };
 
-export default PromptLogin;
+export default connector(Login);

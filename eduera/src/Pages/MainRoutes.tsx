@@ -17,7 +17,12 @@ import { Adminpage } from "./AdminPages/AdminPage";
 
 export const MainRoutes = () => {
   return (
+
+
+    
     <Routes>
+
+
       <Route path="/" element={<HomePage />}></Route>
       <Route path="/login" element={<Login />}></Route>
       <Route path="/programs" element={<ProgramList />}></Route>

@@ -77,6 +77,8 @@ export default function AdminUser() {
     } catch (error) {
       console.error(error);
     }
+
+    alert("Updated")
   };
 
   return (
@@ -177,7 +179,7 @@ export default function AdminUser() {
                   </label>
                   <input type="file" id="file" style={{ display: "none" }} />
                 </ItemUpload>
-                <ItemUpdateButton type="submit">Update</ItemUpdateButton>
+                <ItemUpdateButton type="submit" >Update</ItemUpdateButton>
               </UpdateRight>
             </UpdateForm>
           </UpdateUser>

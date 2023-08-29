@@ -27,6 +27,7 @@
 // };
 
 import { ADD_PRODUCT_SUCCESS, PRODUCT_FAILURE, PRODUCT_REQUEST, GET_PRODUCT_SUCCESS, EDIT_PRODUCT_SUCCESS } from "./actionTypes";
+import { AuthAction } from "./action";
 
 interface Product {
   id: number;
@@ -64,4 +65,38 @@ export const reducer = (state: State = initialState, action: { type: string, pay
       return state;
   }
 };
+
+interface AuthState {
+  isAuthenticated: boolean;
+  user: {
+    username: string;
+  } | null;
+}
+
+const initialStateLogin: AuthState = {
+  isAuthenticated: false,
+  user: null
+};
+
+const authReducer = (state = initialStateLogin, action: AuthAction): AuthState => {
+  switch (action.type) {
+    case 'LOGIN':
+      return {
+        isAuthenticated: true,
+        user: {
+          username: action.payload.username
+        }
+      };
+    case 'LOGOUT':
+      return {
+        isAuthenticated: false,
+        user: null
+      };
+    default:
+      return state;
+  }
+};
+
+export default authReducer;
+
 

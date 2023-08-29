@@ -1,61 +1,59 @@
+import {
+  REGISTER_USER,
+  REGISTER_USER_FAILURE,
+  REGISTER_USER_SUCCESSFUL,
+} from "./actionType";
+import axios from "axios";
 import { LoginData } from "../../Constraints/types";
 import { AppDispatch } from "../store";
-import { userLoginAPI } from "./api";
-import * as types from "./actionType";
 
-export interface IUserLoginRequest {
-  type: typeof types.USER_LOGIN_REQUEST;
+const URL = "https://json-server-b26.onrender.com";
+
+export interface IRegisterRequest {
+  type: typeof REGISTER_USER;
 }
 
-export interface IUserLoginSuccess {
-  type: typeof types.USER_LOGIN_SUCCESS;
-  payload: string;
+export interface IRegisterSuccess {
+  type: typeof REGISTER_USER_SUCCESSFUL;
+  payload: LoginData[];
 }
 
-export interface IUserLoginError {
-  type: typeof types.USER_LOGIN_ERROR;
+export interface IRegisterError {
+  type: typeof REGISTER_USER_FAILURE;
 }
 
-export type AuthAction =
-  | IUserLoginError
-  | IUserLoginRequest
-  | IUserLoginSuccess;
+export type AuthAction = IRegisterRequest | IRegisterSuccess | IRegisterError;
 
-const userLoginRequest = (): IUserLoginRequest => {
+const userRequest = (): IRegisterRequest => {
   return {
-    type: types.USER_LOGIN_REQUEST,
+    type: REGISTER_USER,
   };
 };
 
-const userLoginSuccess = (token: string): IUserLoginSuccess => {
+const userSuccess = (userData: []): IRegisterSuccess => {
   return {
-    type: types.USER_LOGIN_SUCCESS,
-    payload: token,
+    type: REGISTER_USER_SUCCESSFUL,
+    payload: userData,
   };
 };
 
-const userLoginError = (): IUserLoginError => {
+const userError = (): IRegisterError => {
   return {
-    type: types.USER_LOGIN_ERROR,
+    type: REGISTER_USER_FAILURE,
   };
 };
 
-export const userLogin =
-  (payload: LoginData): any =>
-  async (dispatch: AppDispatch) => {
-    dispatch(userLoginRequest());
-    try {
-      let data = await userLoginAPI(payload);
-      if (data) {
-        dispatch(userLoginSuccess(data));
-      }
-    } catch (e) {
-      dispatch(userLoginError());
-    }
-  };
+export const signup = (userData: LoginData) => (dispatch: AppDispatch) => {
+  dispatch({ type: REGISTER_USER });
+  axios
+    .post(`${URL}/login`, userData)
+    .then((res) => {
+      dispatch({ type: REGISTER_USER_SUCCESSFUL, payload: res.data });
+    })
+    .catch((err) => {
+      console.log(err);
 
-
-
-
-
+      dispatch({ type: REGISTER_USER_FAILURE });
+    });
+};
 

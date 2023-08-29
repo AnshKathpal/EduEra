@@ -286,13 +286,15 @@ const Form3 = () => {
   export const SignUp= ()=> {
     const { isOpen, onOpen, onClose } = useDisclosure()
     
+    
+    const [modalUse, setModalUse] = useState("SignUp")
   const toast = useToast();
   const [step, setStep] = useState(1);
   const [progress, setProgress] = useState(33.33);
  
     return (
       <Box display={{ base: "none", md: "block" }}>
-        <Button onClick={onOpen}>SignUp</Button>
+        <Button onClick={onOpen}>{modalUse}</Button>
   
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />

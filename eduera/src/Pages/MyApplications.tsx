@@ -104,7 +104,7 @@ export const MyApplications = () => {
 
     <>
     
-    <Navbar />
+    {/* <Navbar /> */}
 
     <Flex
       flexDirection="column"

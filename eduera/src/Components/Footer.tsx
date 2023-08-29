@@ -11,6 +11,7 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
+import AdminLoginBtn from './AdminComponents/adminLoginBtn';
 
 // const Logo = (props: any) => {
 //   return (
@@ -60,6 +61,7 @@ export default function Footer() {
             <Link href={'#'}>Education </Link>
             <Link href={'#'}>Language</Link>
             <Link href={'#'}>Services</Link>
+            <AdminLoginBtn />
           </Stack>
           <Stack align={'flex-start'}>
             <ListHeader>Company</ListHeader>

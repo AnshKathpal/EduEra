@@ -58,7 +58,7 @@ export const ProgramDetails = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <Box pos="relative" overflow="hidden" width="100%" height="90vh">
         <Flex
           width="100%"
@@ -106,7 +106,7 @@ export const ProgramDetails = () => {
             p={10}
             boxShadow=" rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
             width="30%"
-            height="50%"
+            height="60%"
             backgroundColor="white"
           >
             {selectedProgram && (

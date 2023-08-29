@@ -255,7 +255,7 @@ const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 
 e.preventDefault();
     addProduct(newData);
-    alert("university added")
+    alert("University Added")
     setNewData(initialState)
   };
   return (

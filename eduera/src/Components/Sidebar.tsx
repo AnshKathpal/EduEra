@@ -2,7 +2,7 @@ import { Box, Button, Flex, useDisclosure } from "@chakra-ui/react";
 import React from "react";
 import * as types from "../Constraints/types";
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import { getUniversities } from "../redux/University/api";
 
 // import { Multiselect } from "multiselect-react-dropdown"
@@ -19,12 +19,34 @@ import {
 } from '@chakra-ui/react'
 
 export const Sidebar = () => {
-
+  const navigate = useNavigate();
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [searchParams, setSearchParams] = useSearchParams();
   const initialCountryValues = searchParams.getAll("country");
   const initialPlaceValues = searchParams.getAll("place");
+  let initialOrderValues = searchParams.get("order");
+
+  const [searchQuery, setSearchQuery] = useState<string>("");
+
+  const [sortBy, setSortBy] = useState<string>(searchParams.get("sortBy") || "");
+
+  const handleSearchQueryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+  setSearchQuery(value);
+  const params = new URLSearchParams(searchParams);
+  params.set("search", value);
+  navigate(`?${params.toString()}`);
+  };
+
+  const handleSortByChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = event.target.value;
+    setSortBy(value);
+    const params = new URLSearchParams(searchParams);
+    params.set("sortBy", value);
+    navigate(`?${params.toString()}`);
+  };
+
   const [countryValues, setCountryValues] = useState<string[]>(
     initialCountryValues || []
   );
@@ -32,12 +54,23 @@ export const Sidebar = () => {
     initialPlaceValues || []
   );
 
+   const [order, setOrder] = useState<string>(
+    initialOrderValues || ""
+    
+  );
   const handleCountryValues = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValues = Array.from(
       event.target.selectedOptions,
       (option) => option.value
     );
     setCountryValues(selectedValues);
+
+    const params = new URLSearchParams(searchParams);
+  params.delete("country");
+  selectedValues.forEach((value) => {
+    params.append("country", value);
+  });
+  navigate(`?${params.toString()}`);
   };
 
   const handlePlaceValues = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -46,6 +79,14 @@ export const Sidebar = () => {
       (option) => option.value
     );
     setPlaceValues(selectedValues);
+
+    const params = new URLSearchParams(searchParams);
+    params.delete("place");
+    selectedValues.forEach((value) => {
+      params.append("place", value);
+    });
+    navigate(`?${params.toString()}`);
+
   };
 
   useEffect(() => {
@@ -59,6 +100,18 @@ export const Sidebar = () => {
     if (placeValues.length) params.place = placeValues;
     setSearchParams(params);
   }, [placeValues]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams);
+    const query = params.get("search") || "";
+    setSearchQuery(query);
+  }, [searchParams]);
+
+  useEffect(() => {
+    let params: { country?: string[]; programType?: string[]; sortBy?: string } = {};
+    if (countryValues.length) params.country = countryValues;
+    setSearchParams(params);
+  }, [countryValues, sortBy]);
 
   return (
 
@@ -108,13 +161,16 @@ export const Sidebar = () => {
   </ModalContent>
 </Modal>
 
-<input style ={{border : "1px solid gray" , width : "30%", textAlign : "center"} } placeholder="Search Universities" 
+<input style ={{border : "1px solid gray" , width : "30%", textAlign : "center"} } placeholder="Search Universities"   value={searchQuery}
+  onChange={handleSearchQueryChange}
    />
     
 
-<Button>
-  Sort
-</Button>
+    <select>
+        <option value="">Sort By</option>
+        <option value="name">Name</option>
+        <option value="fees">Fees</option>
+      </select>
 
     
 

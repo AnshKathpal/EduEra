@@ -207,6 +207,7 @@ const AdminUserList = () => {
         console.error("Failed to delete product:", error);
       });
 
+      alert("Product Deleted")
      
   };
 

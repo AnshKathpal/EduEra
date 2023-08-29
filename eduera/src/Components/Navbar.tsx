@@ -1,12 +1,5 @@
-import React from 'react'
-import logo from "../Images/logo.png"
-
-import {  To, NavLink } from 'react-router-dom';
-// export const  = () => {
-//   return (
-//     <div>Navbar</div>
-//   )
-// }
+import { useState, useEffect } from 'react';
+import { useLocation,To, NavLink, useParams } from 'react-router-dom';
 import {
   Box,
   Image,
@@ -22,8 +15,8 @@ Link,
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
-  useDisclosure,
+   useBreakpointValue,
+    useDisclosure
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -33,10 +26,14 @@ import {
 } from '@chakra-ui/icons';
 import {SignUp} from './SignUp';
 import { SignIn } from './SignIn';
-import { useState, useEffect } from 'react';
+import logo from "../Images/logo.png"
+
 // import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
+
+  const [loggedIn, setLoggedIn] = useState(false);
+  
   const { isOpen, onToggle } = useDisclosure();
   const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
   const [navbarTop, setNavbarTop] = useState(0);
@@ -58,6 +55,18 @@ export default function Navbar() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [prevScrollpos]);
+
+  const location = useLocation();
+
+  const hideNavbarRoutes = ['/admin', "/adminuni", "/newUser", "/AdminAnalytics", "/adminDetails", "/adminuni/1", "/adminuni/2", "/adminuni/3","/adminuni/4", "/adminuni/5", "/adminuni/6", "/adminuni/7", "/adminuni/8", "/adminuni/9", "/adminuni/10"];
+
+  const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
+
+  if (shouldHideNavbar) {
+    return null; // Render nothing if the navbar should be hidden
+  }
+
+
   return (
     <Box>
       <Flex
@@ -67,15 +76,15 @@ export default function Navbar() {
         width={"100%"}
         position={"fixed"}
         top={"0"}
-        bg={useColorModeValue('#898a88', ' #4787f3;')}
-        color={useColorModeValue('pink', 'white')}
+        bg='#898a88'
+        color= 'white'
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
         // background={"transparent"}
         // borderBottom={1}
         // borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
+        borderColor= 'gray.900'
         align={'center'}>
         <Flex
           flex={{ base: 1, md: 'auto' }}
@@ -93,9 +102,10 @@ export default function Navbar() {
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'center' }}>
           <NavLink to={"/"} >
           <Text
-            textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
+            // textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
             fontFamily={'heading'}
-            color={useColorModeValue('gray.800', 'white')}>
+            color='gray.800'
+            >
             <Image
               // borderRadius='full'
               boxSize='70px'
@@ -123,7 +133,7 @@ export default function Navbar() {
               </NavLink>
             </Flex>
           <SignIn />
-          <SignUp />
+          {!loggedIn && <SignUp />}
         </Stack>
       </Flex>
 
@@ -136,9 +146,9 @@ export default function Navbar() {
 }
 
 const DesktopNav = () => {
-  const linkColor = useColorModeValue('white', ' #4787f3;');
-  const linkHoverColor = useColorModeValue('gray.800', 'white');
-  const popoverContentBgColor = useColorModeValue('white', 'gray.800');
+  // const linkColor = useColorModeValue('white', ' #4787f3;');
+  // const linkHoverColor = useColorModeValue('gray.800', 'white');
+  // const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
 
   return (
@@ -155,7 +165,7 @@ const DesktopNav = () => {
     padding: '2rem',
     fontSize: 'large',
     fontWeight: 500,
-    color: linkColor,
+    color: "white",
     textDecoration: 'none',
   }}
 >
@@ -194,7 +204,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
       display={'block'}
       p={2}
       rounded={'md'}
-      _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
+      _hover={{ bg: 'pink.50'}}
       >
       <Stack direction={'row'} align={'center'}>
         <Box>
@@ -224,7 +234,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
 const MobileNav = () => {
   return (
     <Stack
-      bg={useColorModeValue('white', 'gray.800')}
+      bg='white'
       p={4}
       display={{ md: 'none' }}>
       {NAV_ITEMS.map((navItem) => (
@@ -250,7 +260,8 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         }}>
         <Text
           fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}>
+          color='gray.600'
+          >
           {label}
         </Text>
         {children && (
@@ -270,7 +281,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           pl={4}
           borderLeft={1}
           borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
+          borderColor='gray.200'
           align={'start'}>
           {children &&
             children.map((child) => (

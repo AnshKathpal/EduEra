@@ -96,6 +96,7 @@ export const Applied = () => {
     e.preventDefault();
     addApplication(newData);
     setNewData(initialState)
+    alert("Application Submitted")
   }
 
   // useEffect(() => {
@@ -115,7 +116,7 @@ export const Applied = () => {
 
   return (
     <>
-    <Navbar />
+    {/* <Navbar /> */}
     {/* <Box pos="relative" overflow="hidden" width="100%" height="90vh"> */}
       <Flex
       flexDirection="column"

@@ -50,6 +50,8 @@ export const ProgramList = () => {
         params: {
           country: searchParams.getAll("country"),
           programType: searchParams.getAll("programType"),
+          search: searchParams.get("search"), // Add this line
+          sortBy: searchParams.get("sortBy"), // Add this line
         },
       };
 
@@ -92,11 +94,16 @@ export const ProgramList = () => {
         : true) &&
       (searchParams.has("programType")
         ? programsList.programType === searchParams.get("programType")
-        : true)
+        : true) &&
+        (searchParams.has("search")
+      ? programsList.programName
+          .toLowerCase()
+          .includes(searchParams.get("search")?.toLowerCase() || "")
+      : true)
   );
   return (
     <div style={{ backgroundColor: "rgb(244,245,247)" }}>
-      <Navbar />
+      {/* <Navbar /> */}
       <Box pos="relative"
       overflow="hidden">
       <Flex

@@ -2,7 +2,7 @@ import { Box, Button, Flex, useDisclosure } from "@chakra-ui/react";
 import React from "react";
 import * as types from "../Constraints/types";
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams,useNavigate } from "react-router-dom";
 // import { getUniversities } from "../redux/University/api";
 import { getPrograms } from "../redux/Programs/api";
 
@@ -21,6 +21,8 @@ import {
 
 export const SidebarPrograms = () => {
 
+  const navigate = useNavigate();
+
 
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [searchParams, setSearchParams] = useSearchParams();
@@ -30,9 +32,26 @@ export const SidebarPrograms = () => {
 
   const [searchQuery, setSearchQuery] = useState<string>("");
 
+  const [sortBy, setSortBy] = useState<string>(searchParams.get("sortBy") || "");
+
+
   const handleSearchQueryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value);
+    const value = event.target.value;
+  setSearchQuery(value);
+  const params = new URLSearchParams(searchParams);
+  params.set("search", value);
+  navigate(`?${params.toString()}`);
   };
+
+  const handleSortByChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = event.target.value;
+    setSortBy(value);
+    const params = new URLSearchParams(searchParams);
+    params.set("sortBy", value);
+    navigate(`?${params.toString()}`);
+  };
+  
+  
 
 
   const [countryValues, setCountryValues] = useState<string[]>(
@@ -53,7 +72,16 @@ export const SidebarPrograms = () => {
       (option) => option.value
     );
     setCountryValues(selectedValues);
+
+    const params = new URLSearchParams(searchParams);
+  params.delete("country");
+  selectedValues.forEach((value) => {
+    params.append("country", value);
+  });
+  navigate(`?${params.toString()}`);
   };
+
+
 
   const handleprogramValues = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValues = Array.from(
@@ -61,6 +89,14 @@ export const SidebarPrograms = () => {
       (option) => option.value
     );
     setProgramValues(selectedValues);
+
+    const params = new URLSearchParams(searchParams);
+  params.delete("programType");
+  selectedValues.forEach((value) => {
+    params.append("programType", value);
+  });
+  navigate(`?${params.toString()}`);
+
   };
 
 
@@ -75,6 +111,19 @@ export const SidebarPrograms = () => {
     if (programValues.length) params.programType = programValues;
     setSearchParams(params);
   }, [programValues]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams);
+    const query = params.get("search") || "";
+    setSearchQuery(query);
+  }, [searchParams]);
+
+  useEffect(() => {
+  let params: { country?: string[]; programType?: string[]; sortBy?: string } = {};
+  if (countryValues.length) params.country = countryValues;
+  setSearchParams(params);
+}, [countryValues, sortBy]);
+
 
   return (
 
@@ -92,7 +141,7 @@ export const SidebarPrograms = () => {
     <ModalCloseButton />
     <ModalBody >
 
-<Flex border="1px solid red" >
+<Flex >
 <select value={countryValues} onChange={handleCountryValues}>
         <option value="">Select Country</option>
         <option value="England">England</option>

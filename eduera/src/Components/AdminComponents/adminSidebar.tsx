@@ -2,7 +2,7 @@ import React from 'react'
 // import { LineStyle, Timeline, TrendingUp, PermIdentity, Storefront, LocalAtm, Assessment, Drafts, Feedback, Forum, Work, Receipt, PieChart } from "@material-ui/icons";
 import styled, { css } from "styled-components";
 import { Link } from 'react-router-dom';
-import ImgLogo from "../../Images/logo.png"
+import ImgLogo from "../../Images/logoAdmin.png"
 
 const AdminSidebar = () => {
     return (
@@ -151,7 +151,7 @@ const SidebarListItem = styled.li`
 const Logo= styled.div`
 display: flex;
   align-items: center;
-  height: 60px;
+  height: 120px;
   
   
 `

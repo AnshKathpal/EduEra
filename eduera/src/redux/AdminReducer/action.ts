@@ -119,3 +119,32 @@ export const editProduct = (id: string, data: any) => (dispatch: Dispatch<AnyAct
       dispatch({ type: PRODUCT_FAILURE });
     });
 };
+
+
+export interface LoginAction {
+  type: 'LOGIN';
+  payload: {
+    username: string;
+    password: string;
+  };
+}
+
+export interface LogoutAction {
+  type: 'LOGOUT';
+}
+
+export type AuthAction = LoginAction | LogoutAction;
+
+export const login = (username: string, password: string): LoginAction => {
+  return {
+    type: 'LOGIN',
+    payload: { username, password }
+  };
+};
+
+export const logout = (): LogoutAction => {
+  return {
+    type: 'LOGOUT'
+  };
+};
+

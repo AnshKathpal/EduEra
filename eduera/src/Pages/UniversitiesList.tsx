@@ -46,6 +46,8 @@ export const UniversitiesList = () => {
         params: {
           country: searchParams.getAll("country"),
           place: searchParams.getAll("place"),
+          search: searchParams.get("search"), // Add this line
+          sortBy: searchParams.get("sortBy"), // Add this line
         },
       };
 
@@ -73,14 +75,19 @@ export const UniversitiesList = () => {
         : true) &&
       (searchParams.has("place")
         ? university.place === searchParams.get("place")
-        : true)
+        : true) &&
+        (searchParams.has("search")
+      ? university.name
+          .toLowerCase()
+          .includes(searchParams.get("search")?.toLowerCase() || "")
+      : true)
   );
 
 
   return (
     <div style = {{backgroundColor :"rgb(244,245,247)"}} >
 
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Box pos="relative"
       overflow="hidden" height="80vh">
