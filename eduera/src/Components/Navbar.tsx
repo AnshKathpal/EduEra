@@ -10,13 +10,13 @@ import {
   Stack,
   Collapse,
   Icon,
-Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
    useBreakpointValue,
-    useDisclosure
+    useDisclosure,
+    Link
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -146,10 +146,6 @@ export default function Navbar() {
 }
 
 const DesktopNav = () => {
-  // const linkColor = useColorModeValue('white', ' #4787f3;');
-  // const linkHoverColor = useColorModeValue('gray.800', 'white');
-  // const popoverContentBgColor = useColorModeValue('white', 'gray.800');
-
 
   return (
     <Stack direction={'row'} spacing={4}>
@@ -171,24 +167,7 @@ const DesktopNav = () => {
 >
   {navItem.label}
 </NavLink>
-              {/* <Link to={navItem.href ?? '/'}>{navItem.label}</Link> */}
             </PopoverTrigger>
-
-            {/* {navItem.children && (
-              <PopoverContent
-                border={0}
-                boxShadow={'xl'}
-                bg={popoverContentBgColor}
-                p={4}
-                rounded={'xl'}
-                minW={'sm'}>
-                <Stack>
-                  {navItem.children.map((child) => (
-                    <DesktopSubNav key={child.label} {...child} />
-                  ))}
-                </Stack>
-              </PopoverContent>
-            )} */}
           </Popover>
         </Box>
       ))}
@@ -236,6 +215,7 @@ const MobileNav = () => {
     <Stack
       bg='white'
       p={4}
+      mt = "20"
       display={{ md: 'none' }}>
       {NAV_ITEMS.map((navItem) => (
         <MobileNavItem key={navItem.label} {...navItem} />
@@ -249,19 +229,16 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
 
   return (
     <Stack spacing={4} onClick={children && onToggle}>
+  {href && ( 
+    <NavLink to={href}>
       <Flex
         py={2}
-        as={Link}
-        // href={href ?? '#'}
         justify={'space-between'}
         align={'center'}
         _hover={{
           textDecoration: 'none',
         }}>
-        <Text
-          fontWeight={600}
-          color='gray.600'
-          >
+        <Text fontWeight={600} color='gray.600'>
           {label}
         </Text>
         {children && (
@@ -274,26 +251,9 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
           />
         )}
       </Flex>
-
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={'solid'}
-          borderColor='gray.200'
-          align={'start'}>
-          {children &&
-            children.map((child) => (
-              <Link key={child.label} py={2}
-              //  href={child.href}
-               >
-                {child.label}
-              </Link>
-            ))}
-        </Stack>
-      </Collapse>
-    </Stack>
+    </NavLink>
+  )}
+</Stack>
   );
 };
 
@@ -301,91 +261,17 @@ interface NavItem {
   label: string;
   subLabel?: string;
   children?: Array<NavItem>;
-  href?: To;
+  href?: string;
 }
 
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'Programs',
     href: "/programs",
-    // children: [
-    //   {
-    //     label: 'Explore Design Work',
-    //     subLabel: 'Trending Design to inspire you',
-    //     href: '#',
-    //   },
-    //   {
-    //     label: 'New & Noteworthy',
-    //     subLabel: 'Up-and-coming Designers',
-    //     href: '#',
-    //   },
-    //   {
-    //     label: 'New & Noteworthy',
-    //     subLabel: 'Up-and-coming Designers',
-    //     href: '#',
-    //   },
-    //   {
-    //     label: 'New & Noteworthy',
-    //     subLabel: 'Up-and-coming Designers',
-    //     href: '#',
-    //   },
-    //   {
-    //     label: 'New & Noteworthy',
-    //     subLabel: 'Up-and-coming Designers',
-    //     href: '#',
-    //   },
-    //   {
-    //     label: 'New & Noteworthy',
-    //     subLabel: 'Up-and-coming Designers',
-    //     href: '#',
-    //   },
-    //   {
-    //     label: 'New & Noteworthy',
-    //     subLabel: 'Up-and-coming Designers',
-    //     href: '#',
-    //   },
-    // ],
   },
   {
     label: 'Universities',
     href: "/universities",
-    //   children: [
-    //     {
-    //       label: 'Job Board',
-    //       subLabel: 'Find your dream design job',
-    //       href: '#',
-    //     },
-    //     {
-    //       label: 'Freelance Projects',
-    //       subLabel: 'An exclusive list for contract work',
-    //       href: '#',
-    //     },
-    //     {
-    //       label: 'Freelance Projects',
-    //       subLabel: 'An exclusive list for contract work',
-    //       href: '#',
-    //     },
-    //     {
-    //       label: 'Freelance Projects',
-    //       subLabel: 'An exclusive list for contract work',
-    //       href: '#',
-    //     },
-    //     {
-    //       label: 'Freelance Projects',
-    //       subLabel: 'An exclusive list for contract work',
-    //       href: '#',
-    //     },
-    //     {
-    //       label: 'Freelance Projects',
-    //       subLabel: 'An exclusive list for contract work',
-    //       href: '#',
-    //     },
-    //     {
-    //       label: 'Freelance Projects',
-    //       subLabel: 'An exclusive list for contract work',
-    //       href: '#',
-    //     },
-    //   ],
   },
 
   {

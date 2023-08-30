@@ -116,11 +116,12 @@ export const ProgramList = () => {
               Find & apply for your ideal program
             </Text>
           </Box>
-
-          <Text color="white" fontSize={{ base: "l", lg: "3xl" }}>
+          <Box display = {{base : "block" , lg : "none"}} bg="white" width={{ base: "90%", lg: "70%" }} opacity={0.8}>
+          <Text position="relative" color="rgb(18,57,78)" fontSize={{ base: "l", lg: "3xl" }}>
             Get a free 48 hour fast-track assessment (worth $185*) to maximize
             your chance of getting admitted
           </Text>
+          </Box>
           <Button
             width={{ base: "50%", lg: "20%" }}
             bg="rgb(72,135,242)"
@@ -134,7 +135,7 @@ export const ProgramList = () => {
       {/* <Box> */}
       <SidebarPrograms />
 
-      <Box id="programBox" width="80%" margin=" auto">
+      <Box id="programBox" width={{base : "90%" , lg : "80%"}} margin="auto">
         {filteredPrograms.length > 0 &&
           filteredPrograms.map((item) => {
             return <ProgramCard key={item.id} {...item} />;

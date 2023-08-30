@@ -25,7 +25,10 @@ import {
 import {useState} from "react"
 import axios from "axios";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../redux/store";
+// import { useAppDispatch, useSelector } from "../redux/store";
+
+
+import {useSelector} from "react-redux"
 
 
 
@@ -39,8 +42,11 @@ export const SignIn= ()=> {
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false); // Add loggedIn state
   const toast = useToast();
-  const dispatch = useAppDispatch();
+  // const dispatch = useAppDispatch();
   const location = useLocation();
+
+  const userName = useSelector((store) => store)
+  console.log(userName)
 
   const navigate = useNavigate();
   const URL = "https://json-server-b26.onrender.com";
@@ -77,6 +83,8 @@ export const SignIn= ()=> {
           isClosable: true,
           position: "top",
         });
+
+        onClose();
 
         setTimeout(() => {
           navigate(location.state?.data || "/", { replace: true });
