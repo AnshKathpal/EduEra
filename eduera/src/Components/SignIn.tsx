@@ -84,8 +84,8 @@ export const SignIn= ()=> {
           position: "top",
         });
 
+        
         onClose();
-
         setTimeout(() => {
           navigate(location.state?.data || "/", { replace: true });
           setLoggedIn(true); // Update loggedIn state to true
