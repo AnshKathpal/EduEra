@@ -117,18 +117,20 @@ export const Sidebar = () => {
 
     <>
 
-<Box p={5} boxShadow=" rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" bg="white" width="80%" margin="2% auto">
+<Box  p={{base : "2" , lg : "5"}} boxShadow=" rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" bg="white" width={{base : "90%" , lg : "80%"}} margin="2% auto">
      
 <Flex justifyContent="space-between" >
 <Button onClick={onOpen}>Filter</Button>
 
 <Modal onClose={onClose} isOpen={isOpen} isCentered>
   <ModalOverlay />
-  <ModalContent>
+  <ModalContent maxW={{base : "90%" , lg : "500px"}}>
     <ModalHeader>Filters</ModalHeader>
     <ModalCloseButton />
     <ModalBody>
 
+
+    <Flex direction={{base : "column" , lg : "row"}} gap = {{base : "5" , lg : "0"}} >
     <select value={countryValues} onChange={handleCountryValues}>
         <option value="">Select Country</option>
         <option value="England">England</option>
@@ -152,7 +154,7 @@ export const Sidebar = () => {
         <option value="private">Private</option>
       </select>
       
-
+      </Flex>
 
     </ModalBody>
     <ModalFooter>
@@ -161,7 +163,8 @@ export const Sidebar = () => {
   </ModalContent>
 </Modal>
 
-<input style ={{border : "1px solid gray" , width : "30%", textAlign : "center"} } placeholder="Search Universities"   value={searchQuery}
+
+<input style ={{border : "1px solid gray" , width : "50%", textAlign : "center"} } placeholder="Search Universities"   value={searchQuery}
   onChange={handleSearchQueryChange}
    />
     

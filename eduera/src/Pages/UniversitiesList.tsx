@@ -90,7 +90,7 @@ export const UniversitiesList = () => {
       {/* <Navbar /> */}
 
       <Box pos="relative"
-      overflow="hidden" height="80vh">
+      overflow="hidden">
       <Flex
         backgroundImage={UniversityImg}
         backgroundSize="cover"
@@ -98,30 +98,30 @@ export const UniversitiesList = () => {
         justifyContent="center"
         alignItems="center"
         width = "100%"
-        height= "100%"
+        height={{ base: "40vh", lg: "80vh" }}
         id="parallax-background"
         gap={5}
       >
-        <Box bg="white" width="70%" opacity={0.8} >
-        <Text position="relative" color="rgb(18,57,78)" fontSize="7xl">
+        <Box bg="white" width={{ base: "90%", lg: "70%" }} opacity={0.8} >
+        <Text position="relative" color="rgb(18,57,78)" fontSize={{ base: "xl", lg: "7xl" }}>
             Find & apply for your ideal University
           </Text>
         </Box>
-          <Box bg="white" opacity = {0.8} >
-          <Text position="relative" color="rgb(18,57,78)" fontSize="3xl" >
+          <Box display = {{base : "block" , lg : "none"}} bg="white" opacity = {0.8} width={{ base: "90%", lg: "70%" }}>
+          <Text position="relative"  color="rgb(18,57,78)" fontSize={{ base: "l", lg: "3xl" }} >
           Get a free 48 hour fast-track assessment (worth $185*) to maximize
           your chance of getting admitted
         </Text>
           </Box>
         
-        <Button width="20%" bg="rgb(72,135,242)" mt={5}>How EduEra can Help</Button>
+        <Button width={{ base: "50%", lg: "20%" }} bg="rgb(72,135,242)" mt={5}>How EduEra can Help</Button>
       </Flex>
       </Box>
       {/* <Box> */}
         <Sidebar />
       {/* </Box> */}
 
-      <Grid gridTemplateColumns="repeat(3,1fr)" width="80%" margin="auto" gap={10} >
+      <Grid gridTemplateColumns={{base : "repeat(1,1fr)", lg : "repeat(3,1fr)"}} width={{base : "90%" , lg : "80%"}} margin="auto" gap={10} >
 
           {filteredUniversities.length > 0 &&
             filteredUniversities.map((item) => {
@@ -137,7 +137,7 @@ export const UniversitiesList = () => {
           We maximise your chance of being admitted with our free, 48 hour
           fast-track assessment (worth $185*)
         </Text>
-        <Flex justifyContent="space-around" alignItems="center">
+        <Flex direction={{base : "column", lg : "row"}} justifyContent="space-around"  alignItems="center">
           <Box p={4}>
             <img
               style={{ margin: "auto" }}
@@ -145,7 +145,7 @@ export const UniversitiesList = () => {
               alt=""
             />
             <Text fontWeight="bold">Find your ideal program</Text>
-            <Text>
+            <Text display = {{base : "none", lg : "inline"}} >
               Filter 10,000s of programs down to a shortlist perfect for you,
               where you have a strong chance of getting admitted
             </Text>
@@ -156,8 +156,8 @@ export const UniversitiesList = () => {
               src="https://images.studee.com/illustrations/illustration__spot--save-details.png?ixlib=js-2.3.2&auto=format&fit=crop&q=45&w=128"
               alt=""
             />
-            <Text fontWeight="bold">Find your ideal program</Text>
-            <Text>
+            <Text fontWeight="bold" >Find your ideal program</Text>
+            <Text display = {{base : "none", lg : "inline"}}  >
               Filter 10,000s of programs down to a shortlist perfect for you,
               where you have a strong chance of getting admitted
             </Text>
@@ -169,7 +169,7 @@ export const UniversitiesList = () => {
               alt=""
             />
             <Text fontWeight="bold">Find your ideal program</Text>
-            <Text>
+            <Text display = {{base : "none", lg : "inline"}}  >
               Filter 10,000s of programs down to a shortlist perfect for you,
               where you have a strong chance of getting admitted
             </Text>
@@ -181,7 +181,7 @@ export const UniversitiesList = () => {
               alt=""
             />
             <Text fontWeight="bold">Find your ideal program</Text>
-            <Text>
+            <Text display = {{base : "none", lg : "inline"}}  >
               Filter 10,000s of programs down to a shortlist perfect for you,
               where you have a strong chance of getting admitted
             </Text>

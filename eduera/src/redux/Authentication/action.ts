@@ -43,6 +43,8 @@ const userError = (): IRegisterError => {
   };
 };
 
+
+
 export const signup = (userData: LoginData) => (dispatch: AppDispatch) => {
   dispatch({ type: REGISTER_USER });
   axios
@@ -52,7 +54,6 @@ export const signup = (userData: LoginData) => (dispatch: AppDispatch) => {
     })
     .catch((err) => {
       console.log(err);
-
       dispatch({ type: REGISTER_USER_FAILURE });
     });
 };
