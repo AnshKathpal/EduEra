@@ -116,8 +116,6 @@ export const Applied = () => {
 
   return (
     <>
-    {/* <Navbar /> */}
-    {/* <Box pos="relative" overflow="hidden" width="100%" height="90vh"> */}
       <Flex
       flexDirection="column"
         width="100%"
@@ -127,13 +125,6 @@ export const Applied = () => {
         alignItems="center"
         backgroundImage={AppliedImg}
         backgroundSize="cover"
-        // id="parallax-background"
-        // pos="absolute"
-        // top="0"
-        // left="0"
-        // w="100%"
-        // h="100%"
-        // style={{ willChange: "transform" }}
       >
         {selectedProgram && (
           <>
