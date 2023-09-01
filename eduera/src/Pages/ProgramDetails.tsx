@@ -62,8 +62,9 @@ export const ProgramDetails = () => {
       <Box pos="relative" overflow="hidden" width="100%" height="90vh">
         <Flex
           width="100%"
-          height="90vh"
-          justifyContent="center"
+          direction={{base : "column" , lg : "row"}}
+          height={{ base: "90vh", lg: "90vh" }}
+          justifyContent={{base : "flex-end" , lg : "center"}}
           alignItems="center"
           bg="url(https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1600)"
           id="parallax-background"
@@ -71,22 +72,20 @@ export const ProgramDetails = () => {
           pos="absolute"
           top="0"
           left="0"
-          w="100%"
-          h="100%"
         >
           <Flex
-            p={10}
+            p={{base : 0, lg : 10}}
             flexDirection="column"
-            gap={10}
+            gap={{base : 3, lg : 10}}
             justifyContent="center"
             alignItems="center"
-            width="40%"
-            height="70%"
+            width={{base : "95%" , lg : "40%"}}
+            height={{base : "50%" , lg : "70%"}}
           >
             {selectedProgram && (
               <>
                 <Box bg="white" opacity={0.6} width="100%">
-                  <Text color="rgb(18,57,78)" fontSize="4xl">
+                  <Text color="rgb(18,57,78)" fontSize={{base : "l" , lg : "4xl"}}>
                     Apply for {selectedProgram.programName} -{" "}
                     {selectedProgram.degree}
                   </Text>
@@ -95,18 +94,18 @@ export const ProgramDetails = () => {
                   Get a free 48 hour fast-track assessment (worth $185*) to
                   maximize your chance of getting admitted
                 </h1>
-                <HStack>
+                <Stack direction={{base : "column" , lg : "row"}} >
                   <Button>Ready to apply</Button>
                   <Button>Boost Your Addmission Chances</Button>
-                </HStack>
+                </Stack>
               </>
             )}
           </Flex>
           <Box
-            p={10}
+            p={{base : 1 , lg : 10}}
             boxShadow=" rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
-            width="30%"
-            height="60%"
+            width={{base : "90%" , lg : "30%"}}
+            height={{base : "40%" , lg : "60%"}}
             backgroundColor="white"
           >
             {selectedProgram && (
@@ -151,15 +150,15 @@ export const ProgramDetails = () => {
           We maximise your chance of being admitted with our free, 48 hour
           fast-track assessment (worth $185*)
         </Text>
-        <Flex justifyContent="space-around" alignItems="center">
-          <Box p={4}>
+        <Flex justifyContent="space-around" alignItems="center" direction={{base : "column", lg : "row"}}>
+          <Box p={4} >
             <img
               style={{ margin: "auto" }}
               src="https://images.studee.com/illustrations/illustration__spot--program-matching.png?ixlib=js-2.3.2&auto=format&fit=crop&q=45&w=128"
               alt=""
             />
             <Text fontWeight="bold">Find your ideal program</Text>
-            <Text>
+            <Text display = {{base : "none", lg : "inline"}} >
               Filter 10,000s of programs down to a shortlist perfect for you,
               where you have a strong chance of getting admitted
             </Text>
@@ -171,7 +170,7 @@ export const ProgramDetails = () => {
               alt=""
             />
             <Text fontWeight="bold">Find your ideal program</Text>
-            <Text>
+            <Text display = {{base : "none", lg : "inline"}} >
               Filter 10,000s of programs down to a shortlist perfect for you,
               where you have a strong chance of getting admitted
             </Text>
@@ -183,7 +182,7 @@ export const ProgramDetails = () => {
               alt=""
             />
             <Text fontWeight="bold">Find your ideal program</Text>
-            <Text>
+            <Text display = {{base : "none", lg : "inline"}} >
               Filter 10,000s of programs down to a shortlist perfect for you,
               where you have a strong chance of getting admitted
             </Text>
@@ -195,7 +194,7 @@ export const ProgramDetails = () => {
               alt=""
             />
             <Text fontWeight="bold">Find your ideal program</Text>
-            <Text>
+            <Text display = {{base : "none", lg : "inline"}} >
               Filter 10,000s of programs down to a shortlist perfect for you,
               where you have a strong chance of getting admitted
             </Text>
@@ -206,13 +205,13 @@ export const ProgramDetails = () => {
           color="rgb(74,152,120)"
           bg="rgb(243,248,246)"
           margin="auto"
-          width="80%"
+          width={{base : "95%" , lg : "80%"}}
           mt={5}
         >
           Carbon compensation - We'll plant trees in your name to compensate for
           the carbon generated by all your flights to and from university.
         </Text>
-        <Text bg="rgb(247,248,249)" margin="auto" width="80%" mt={5}>
+        <Text bg="rgb(247,248,249)" margin="auto" width={{base : "95%" , lg : "80%"}}mt={5}>
           All our services are 100% free as we're funded by universities. You
           pay deposits & tuition fees directly to the university.
         </Text>
@@ -225,22 +224,8 @@ export const ProgramDetails = () => {
         </Link>
       </Box>
 
-      {/* <Flex justifyContent="space-between" width="80%" margin="auto" border="1px solid red" >
-        <Box>
-        <Text>Program Overview</Text>
-        {selectedProgram && (
-          <Text>
-            What {selectedProgram.programName} says about their program:
-          </Text>
-        )}
-        </Box>
-        <Box>
 
-        </Box>
-        
-      </Flex> */}
-
-      <Flex gap={30} width="80%" margin="3% auto" height="400px">
+      <Flex gap={30} width="80%" align={"center"} direction={{base : "column" , lg : "row"}} margin="3% auto" height="400px">
         <Box width="80%">
           <img
             src="https://images.studee.com/images/content/content__trees-for-degrees-badge.svg"
@@ -253,7 +238,7 @@ export const ProgramDetails = () => {
           alignItems="center"
           flexDirection="column"
         >
-          <Text fontWeight="bolder" fontSize="6xl">
+          <Text fontWeight="bolder" fontSize={{base : "xl" , lg : "6xl"}}>
             Trees for degrees - The one million trees project
           </Text>
           <Text>
@@ -266,11 +251,11 @@ export const ProgramDetails = () => {
           </Text>
         </Flex>
       </Flex>
-      <Box width="80%" margin="auto">
-        <Text mb={4} fontSize="4xl">
+      <Box mt = {{base : 170, lg : 0}} ml  = {{base : "5%" , lg : "10%"}} w = {{base : "90%", lg : "80%"}} >
+        <Text mb={4} fontSize={{base : "l" , lg : "4xl"}}>
           We match students with universities all over the world
         </Text>
-        <Text fontSize="xl">Over 400 universities in 30 countries</Text>
+        <Text fontSize={{base : "l" , lg : "xl"}}>Over 400 universities in 30 countries</Text>
         <Flex mt={4}>
           <img
             style={{ margin: "auto" }}

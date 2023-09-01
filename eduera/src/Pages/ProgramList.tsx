@@ -101,10 +101,11 @@ export const ProgramList = () => {
         <Flex
           bg="url(https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=1600)"
           flexDirection="column"
-          justifyContent="center"
+          justifyContent={{base : "flex-end" , lg : "center"}}
           alignItems="center"
           height={{ base: "40vh", lg: "80vh" }}
           id="parallax-background"
+          pb = {{base : 5, lg : 0}}
           gap={5}
         >
           <Box bg="white" width={{ base: "90%", lg: "70%" }} opacity={0.8}>
