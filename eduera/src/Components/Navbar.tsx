@@ -28,7 +28,6 @@ import {SignUp} from './SignUp';
 import { SignIn } from './SignIn';
 import logo from "../Images/logo.png"
 
-// import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
 
@@ -37,6 +36,12 @@ export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
   const [prevScrollpos, setPrevScrollpos] = useState(window.pageYOffset);
   const [navbarTop, setNavbarTop] = useState(0);
+
+
+  const handleSuccessfulLogin = () => {
+    setLoggedIn(true);
+  };
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -81,9 +86,6 @@ export default function Navbar() {
         minH={'60px'}
         py={{ base: 2 }}
         px={{ base: 4 }}
-        // background={"transparent"}
-        // borderBottom={1}
-        // borderStyle={'solid'}
         borderColor= 'gray.900'
         align={'center'}>
         <Flex
@@ -132,14 +134,13 @@ export default function Navbar() {
             <Text  color={"white"} as={"b"}>{"MyApplication"}</Text>
               </NavLink>
             </Flex>
-          <SignIn />
+          <SignIn onSuccessfulLogin={handleSuccessfulLogin} />
           {!loggedIn && <SignUp />}
         </Stack>
       </Flex>
 
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
-
       </Collapse>
     </Box>
   );
